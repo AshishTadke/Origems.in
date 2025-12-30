@@ -134,7 +134,7 @@ function App() {
             From Salesforce customization to stunning web and mobile experiences.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" onClick={scrollToContact} className="bg-gradient-to-r from-purple-600 to-pink-600 text-lg" data-testid="hero-cta-primary">
+            <Button size="lg" onClick={scrollToContact} className="bg-gradient-to-r from-emerald-600 to-teal-600 text-lg" data-testid="hero-cta-primary">
               Get Free Consultation
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
