@@ -101,12 +101,12 @@ function App() {
               </span>
             </div>
             <div className="hidden md:flex space-x-8">
-              <a href="#services" className="text-slate-700 hover:text-purple-600 transition">Services</a>
-              <a href="#portfolio" className="text-slate-700 hover:text-purple-600 transition">Portfolio</a>
-              <a href="#testimonials" className="text-slate-700 hover:text-purple-600 transition">Testimonials</a>
-              <a href="#faq" className="text-slate-700 hover:text-purple-600 transition">FAQ</a>
+              <a href="#services" className="text-slate-700 hover:text-emerald-600 transition">Services</a>
+              <a href="#portfolio" className="text-slate-700 hover:text-emerald-600 transition">Portfolio</a>
+              <a href="#testimonials" className="text-slate-700 hover:text-emerald-600 transition">Testimonials</a>
+              <a href="#faq" className="text-slate-700 hover:text-emerald-600 transition">FAQ</a>
             </div>
-            <Button onClick={scrollToContact} className="bg-gradient-to-r from-purple-600 to-pink-600" data-testid="nav-contact-button">
+            <Button onClick={scrollToContact} className="bg-gradient-to-r from-emerald-600 to-teal-600" data-testid="nav-contact-button">
               Get Started
             </Button>
           </div>
