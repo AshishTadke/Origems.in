@@ -116,14 +116,14 @@ function App() {
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8" data-testid="hero-section">
         <div className="max-w-7xl mx-auto text-center">
-          <Badge className="mb-4 bg-purple-100 text-purple-700 hover:bg-purple-200" data-testid="hero-badge">
+          <Badge className="mb-4 bg-emerald-100 text-emerald-700 hover:bg-emerald-200" data-testid="hero-badge">
             <Zap className="h-3 w-3 mr-1" />
             Transforming Ideas into Reality
           </Badge>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-slate-900 via-purple-800 to-pink-600 bg-clip-text text-transparent leading-tight" data-testid="hero-title">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-slate-900 via-emerald-800 to-teal-600 bg-clip-text text-transparent leading-tight" data-testid="hero-title">
             Your Partner in
             <br />
-            <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
               Salesforce, Web & Mobile
             </span>
             <br />
