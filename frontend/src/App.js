@@ -287,28 +287,28 @@ function App() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center" data-testid="feature-customized">
-              <div className="w-16 h-16 bg-gradient-to-br from-purple-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-gradient-to-br from-emerald-600 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Target className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Customized Solutions</h3>
               <p className="text-slate-600">No one-size-fits-all—everything we deliver is tailored to your business</p>
             </div>
             <div className="text-center" data-testid="feature-team">
-              <div className="w-16 h-16 bg-gradient-to-br from-purple-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-gradient-to-br from-emerald-600 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Expert Team</h3>
               <p className="text-slate-600">Certified professionals with years of experience in their domains</p>
             </div>
             <div className="text-center" data-testid="feature-support">
-              <div className="w-16 h-16 bg-gradient-to-br from-purple-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-gradient-to-br from-emerald-600 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Award className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-2">End-to-End Support</h3>
               <p className="text-slate-600">From ideation to launch and beyond, we're with you every step</p>
             </div>
             <div className="text-center" data-testid="feature-impact">
-              <div className="w-16 h-16 bg-gradient-to-br from-purple-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-gradient-to-br from-emerald-600 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <TrendingUp className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Business Impact</h3>
