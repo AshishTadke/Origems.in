@@ -577,7 +577,7 @@ function App() {
                 <Button
                   type="submit"
                   size="lg"
-                  className="w-full bg-gradient-to-r from-purple-600 to-pink-600"
+                  className="w-full bg-gradient-to-r from-emerald-600 to-teal-600"
                   disabled={isSubmitting}
                   data-testid="contact-submit-button"
                 >
