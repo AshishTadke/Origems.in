@@ -142,7 +142,7 @@ async def get_testimonials():
             "role": "CTO, TechCorp Inc.",
             "content": "Origem transformed our Salesforce implementation completely. Their expertise and dedication made the entire process seamless. Highly recommended!",
             "rating": 5,
-            "image": "https://ui-avatars.com/api/?name=Sarah+Johnson&background=8b5cf6&color=fff"
+            "image": "https://ui-avatars.com/api/?name=Sarah+Johnson&background=059669&color=fff"
         },
         {
             "id": "2",
@@ -150,7 +150,7 @@ async def get_testimonials():
             "role": "CEO, Digital Solutions",
             "content": "The mobile app they developed exceeded our expectations. Professional team, excellent communication, and delivered on time.",
             "rating": 5,
-            "image": "https://ui-avatars.com/api/?name=Michael+Chen&background=8b5cf6&color=fff"
+            "image": "https://ui-avatars.com/api/?name=Michael+Chen&background=059669&color=fff"
         },
         {
             "id": "3",
@@ -158,7 +158,7 @@ async def get_testimonials():
             "role": "Marketing Director, GrowthHub",
             "content": "Our website redesign was a game-changer. Origem's creative approach and technical skills resulted in a stunning, high-performing site.",
             "rating": 5,
-            "image": "https://ui-avatars.com/api/?name=Emily+Rodriguez&background=8b5cf6&color=fff"
+            "image": "https://ui-avatars.com/api/?name=Emily+Rodriguez&background=059669&color=fff"
         }
     ]
     return testimonials
