@@ -179,9 +179,9 @@ function App() {
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-2 hover:border-purple-200" data-testid="service-salesforce">
+            <Card className="hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-2 hover:border-emerald-200" data-testid="service-salesforce">
               <CardHeader>
-                <div className="w-14 h-14 bg-gradient-to-br from-purple-600 to-pink-600 rounded-lg flex items-center justify-center mb-4">
+                <div className="w-14 h-14 bg-gradient-to-br from-emerald-600 to-teal-600 rounded-lg flex items-center justify-center mb-4">
                   <Code className="h-7 w-7 text-white" />
                 </div>
                 <CardTitle>Salesforce Services</CardTitle>
