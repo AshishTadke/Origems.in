@@ -588,7 +588,7 @@ function App() {
           </Card>
           <div className="text-center mt-8">
             <p className="text-slate-600 mb-2">Or call us directly:</p>
-            <a href="tel:+918983609962" className="text-2xl font-semibold text-purple-600 hover:text-purple-700" data-testid="contact-phone-link">
+            <a href="tel:+918983609962" className="text-2xl font-semibold text-emerald-600 hover:text-emerald-700" data-testid="contact-phone-link">
               (+91) 89836 09962
             </a>
           </div>
