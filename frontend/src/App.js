@@ -146,24 +146,24 @@ function App() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-gradient-to-r from-purple-600 to-pink-600" data-testid="stats-section">
+      <section className="py-16 bg-gradient-to-r from-emerald-600 to-teal-600" data-testid="stats-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white">
             <div data-testid="stat-projects">
               <div className="text-4xl font-bold mb-2">150+</div>
-              <div className="text-purple-100">Projects Delivered</div>
+              <div className="text-emerald-100">Projects Delivered</div>
             </div>
             <div data-testid="stat-clients">
               <div className="text-4xl font-bold mb-2">80+</div>
-              <div className="text-purple-100">Happy Clients</div>
+              <div className="text-emerald-100">Happy Clients</div>
             </div>
             <div data-testid="stat-years">
               <div className="text-4xl font-bold mb-2">8+</div>
-              <div className="text-purple-100">Years Experience</div>
+              <div className="text-emerald-100">Years Experience</div>
             </div>
             <div data-testid="stat-rating">
               <div className="text-4xl font-bold mb-2">4.9/5</div>
-              <div className="text-purple-100">Client Rating</div>
+              <div className="text-emerald-100">Client Rating</div>
             </div>
           </div>
         </div>
