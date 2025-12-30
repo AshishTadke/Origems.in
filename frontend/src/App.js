@@ -596,10 +596,10 @@ function App() {
       </section>
 
       {/* Newsletter Section */}
-      <section className="py-16 bg-gradient-to-r from-purple-600 to-pink-600" data-testid="newsletter-section">
+      <section className="py-16 bg-gradient-to-r from-emerald-600 to-teal-600" data-testid="newsletter-section">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4" data-testid="newsletter-title">Stay Updated</h2>
-          <p className="text-purple-100 mb-8">Subscribe to our newsletter for the latest insights and updates</p>
+          <p className="text-emerald-100 mb-8">Subscribe to our newsletter for the latest insights and updates</p>
           <form onSubmit={handleNewsletterSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
             <Input
               type="email"
