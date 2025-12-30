@@ -623,7 +623,7 @@ function App() {
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <Sparkles className="h-6 w-6 text-purple-400" />
+                <Sparkles className="h-6 w-6 text-emerald-400" />
                 <span className="text-2xl font-bold">Or!gem</span>
               </div>
               <p className="text-slate-400">Transforming ideas into reality through innovative technology solutions.</p>
@@ -631,26 +631,26 @@ function App() {
             <div>
               <h3 className="font-semibold mb-4">Services</h3>
               <ul className="space-y-2 text-slate-400">
-                <li><a href="#services" className="hover:text-purple-400 transition">Salesforce Services</a></li>
-                <li><a href="#services" className="hover:text-purple-400 transition">Mobile Development</a></li>
-                <li><a href="#services" className="hover:text-purple-400 transition">Web Development</a></li>
+                <li><a href="#services" className="hover:text-emerald-400 transition">Salesforce Services</a></li>
+                <li><a href="#services" className="hover:text-emerald-400 transition">Mobile Development</a></li>
+                <li><a href="#services" className="hover:text-emerald-400 transition">Web Development</a></li>
               </ul>
             </div>
             <div>
               <h3 className="font-semibold mb-4">Company</h3>
               <ul className="space-y-2 text-slate-400">
-                <li><a href="#portfolio" className="hover:text-purple-400 transition">Portfolio</a></li>
-                <li><a href="#testimonials" className="hover:text-purple-400 transition">Testimonials</a></li>
-                <li><a href="#faq" className="hover:text-purple-400 transition">FAQ</a></li>
+                <li><a href="#portfolio" className="hover:text-emerald-400 transition">Portfolio</a></li>
+                <li><a href="#testimonials" className="hover:text-emerald-400 transition">Testimonials</a></li>
+                <li><a href="#faq" className="hover:text-emerald-400 transition">FAQ</a></li>
               </ul>
             </div>
             <div>
               <h3 className="font-semibold mb-4">Connect</h3>
               <ul className="space-y-2 text-slate-400">
-                <li><a href="#" className="hover:text-purple-400 transition">LinkedIn</a></li>
-                <li><a href="#" className="hover:text-purple-400 transition">Twitter</a></li>
-                <li><a href="#" className="hover:text-purple-400 transition">Facebook</a></li>
-                <li><a href="#contact" className="hover:text-purple-400 transition">Contact Us</a></li>
+                <li><a href="#" className="hover:text-emerald-400 transition">LinkedIn</a></li>
+                <li><a href="#" className="hover:text-emerald-400 transition">Twitter</a></li>
+                <li><a href="#" className="hover:text-emerald-400 transition">Facebook</a></li>
+                <li><a href="#contact" className="hover:text-emerald-400 transition">Contact Us</a></li>
               </ul>
             </div>
           </div>
