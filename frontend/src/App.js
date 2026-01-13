@@ -90,19 +90,19 @@ function App() {
       <Toaster />
       
       {/* Apple-style Navigation */}
-      <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-xl z-50 border-b border-gray-100" data-testid="main-navigation">
+      <nav className="fixed top-0 w-full bg-gray-900/95 backdrop-blur-xl z-50 border-b border-gray-800" data-testid="main-navigation">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex justify-between items-center h-12">
             <div className="flex items-center">
-              <span className="text-xl font-semibold text-gray-900">Origem</span>
+              <span className="text-xl font-semibold text-white">Origem</span>
             </div>
             <div className="hidden md:flex space-x-10 text-sm">
-              <a href="#services" className="text-gray-600 hover:text-gray-900 transition">Services</a>
-              <a href="#portfolio" className="text-gray-600 hover:text-gray-900 transition">Portfolio</a>
-              <a href="#testimonials" className="text-gray-600 hover:text-gray-900 transition">Testimonials</a>
-              <a href="#faq" className="text-gray-600 hover:text-gray-900 transition">FAQ</a>
+              <a href="#services" className="text-gray-400 hover:text-white transition">Services</a>
+              <a href="#portfolio" className="text-gray-400 hover:text-white transition">Portfolio</a>
+              <a href="#testimonials" className="text-gray-400 hover:text-white transition">Testimonials</a>
+              <a href="#faq" className="text-gray-400 hover:text-white transition">FAQ</a>
             </div>
-            <button onClick={scrollToContact} className="text-sm text-blue-600 hover:text-blue-700" data-testid="nav-contact-button">
+            <button onClick={scrollToContact} className="text-sm text-blue-500 hover:text-blue-400" data-testid="nav-contact-button">
               Contact
             </button>
           </div>
