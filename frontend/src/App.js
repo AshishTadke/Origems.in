@@ -154,22 +154,22 @@ function App() {
       </section>
 
       {/* Services Section - Apple Style */}
-      <section id="services" className="py-24 px-6 bg-white" data-testid="services-section">
+      <section id="services" className="py-24 px-6 bg-gray-900" data-testid="services-section">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-20">
-            <h2 className="text-5xl md:text-6xl font-semibold mb-4 text-gray-900" data-testid="services-title">What we do.</h2>
-            <p className="text-xl text-gray-600">Tailored solutions for your unique needs</p>
+            <h2 className="text-5xl md:text-6xl font-semibold mb-4 text-white" data-testid="services-title">What we do.</h2>
+            <p className="text-xl text-gray-400">Tailored solutions for your unique needs</p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="apple-card" data-testid="service-salesforce">
+            <div className="apple-card-dark" data-testid="service-salesforce">
               <div className="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center mb-6">
                 <Code className="h-6 w-6 text-white" />
               </div>
-              <h3 className="text-2xl font-semibold mb-3 text-gray-900">Salesforce Services</h3>
-              <p className="text-gray-600 mb-6">
+              <h3 className="text-2xl font-semibold mb-3 text-white">Salesforce Services</h3>
+              <p className="text-gray-400 mb-6">
                 Expert customization, technical solutions, and development work
               </p>
-              <ul className="space-y-3 text-sm text-gray-600">
+              <ul className="space-y-3 text-sm text-gray-400">
                 <li>Custom Salesforce Development</li>
                 <li>Integration & Migration</li>
                 <li>Workflow Automation</li>
@@ -177,15 +177,15 @@ function App() {
               </ul>
             </div>
 
-            <div className="apple-card" data-testid="service-mobile">
+            <div className="apple-card-dark" data-testid="service-mobile">
               <div className="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center mb-6">
                 <Smartphone className="h-6 w-6 text-white" />
               </div>
-              <h3 className="text-2xl font-semibold mb-3 text-gray-900">Mobile App Development</h3>
-              <p className="text-gray-600 mb-6">
+              <h3 className="text-2xl font-semibold mb-3 text-white">Mobile App Development</h3>
+              <p className="text-gray-400 mb-6">
                 Creating innovative mobile applications for iOS and Android
               </p>
-              <ul className="space-y-3 text-sm text-gray-600">
+              <ul className="space-y-3 text-sm text-gray-400">
                 <li>Native & Cross-Platform Apps</li>
                 <li>UI/UX Design</li>
                 <li>App Store Optimization</li>
@@ -193,15 +193,15 @@ function App() {
               </ul>
             </div>
 
-            <div className="apple-card" data-testid="service-web">
+            <div className="apple-card-dark" data-testid="service-web">
               <div className="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center mb-6">
                 <Globe className="h-6 w-6 text-white" />
               </div>
-              <h3 className="text-2xl font-semibold mb-3 text-gray-900">Web Development</h3>
-              <p className="text-gray-600 mb-6">
+              <h3 className="text-2xl font-semibold mb-3 text-white">Web Development</h3>
+              <p className="text-gray-400 mb-6">
                 Website creation, digital presence, and web solutions
               </p>
-              <ul className="space-y-3 text-sm text-gray-600">
+              <ul className="space-y-3 text-sm text-gray-400">
                 <li>Custom Web Applications</li>
                 <li>E-commerce Solutions</li>
                 <li>Progressive Web Apps</li>
