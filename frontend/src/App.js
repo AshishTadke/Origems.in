@@ -10,8 +10,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { useToast } from '@/hooks/use-toast';
 import { Toaster } from '@/components/ui/toaster';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { Badge } from '@/components/ui/badge';
-import { Star, Code, Smartphone, Globe, Users, TrendingUp, Award, CheckCircle, ArrowRight, Sparkles, Zap, Target } from 'lucide-react';
+import { Code, Smartphone, Globe, ChevronRight } from 'lucide-react';
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 const API = `${BACKEND_URL}/api`;
@@ -87,404 +86,284 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+    <div className="min-h-screen bg-white">
       <Toaster />
       
-      {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-slate-200" data-testid="main-navigation">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center space-x-2">
-              <Sparkles className="h-6 w-6 text-emerald-600" />
-              <span className="text-2xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
-                Or!gem
-              </span>
+      {/* Apple-style Navigation */}
+      <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-xl z-50 border-b border-gray-100" data-testid="main-navigation">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex justify-between items-center h-12">
+            <div className="flex items-center">
+              <span className="text-xl font-semibold text-gray-900">Origem</span>
             </div>
-            <div className="hidden md:flex space-x-8">
-              <a href="#services" className="text-slate-700 hover:text-emerald-600 transition">Services</a>
-              <a href="#portfolio" className="text-slate-700 hover:text-emerald-600 transition">Portfolio</a>
-              <a href="#testimonials" className="text-slate-700 hover:text-emerald-600 transition">Testimonials</a>
-              <a href="#faq" className="text-slate-700 hover:text-emerald-600 transition">FAQ</a>
+            <div className="hidden md:flex space-x-10 text-sm">
+              <a href="#services" className="text-gray-600 hover:text-gray-900 transition">Services</a>
+              <a href="#portfolio" className="text-gray-600 hover:text-gray-900 transition">Portfolio</a>
+              <a href="#testimonials" className="text-gray-600 hover:text-gray-900 transition">Testimonials</a>
+              <a href="#faq" className="text-gray-600 hover:text-gray-900 transition">FAQ</a>
             </div>
-            <Button onClick={scrollToContact} className="bg-gradient-to-r from-emerald-600 to-teal-600" data-testid="nav-contact-button">
-              Get Started
-            </Button>
+            <button onClick={scrollToContact} className="text-sm text-blue-600 hover:text-blue-700" data-testid="nav-contact-button">
+              Contact
+            </button>
           </div>
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8" data-testid="hero-section">
-        <div className="max-w-7xl mx-auto text-center">
-          <Badge className="mb-4 bg-emerald-100 text-emerald-700 hover:bg-emerald-200" data-testid="hero-badge">
-            <Zap className="h-3 w-3 mr-1" />
-            Transforming Ideas into Reality
-          </Badge>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-slate-900 via-emerald-800 to-teal-600 bg-clip-text text-transparent leading-tight" data-testid="hero-title">
-            Your Partner in
-            <br />
-            <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
-              Salesforce, Web & Mobile
-            </span>
-            <br />
-            Solutions
+      {/* Hero Section - Apple Style */}
+      <section className="pt-32 pb-24 px-6" data-testid="hero-section">
+        <div className="max-w-5xl mx-auto text-center">
+          <h1 className="text-6xl md:text-8xl font-semibold mb-6 text-gray-900 tracking-tight" data-testid="hero-title">
+            Your Partner in<br />Salesforce, Web<br />& Mobile Solutions
           </h1>
-          <p className="text-xl text-slate-600 mb-8 max-w-3xl mx-auto" data-testid="hero-description">
-            We deliver end-to-end technology solutions that transform your business. 
-            From Salesforce customization to stunning web and mobile experiences.
+          <p className="text-xl md:text-2xl text-gray-600 mb-8 font-normal" data-testid="hero-description">
+            End-to-end technology solutions that transform your business.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" onClick={scrollToContact} className="bg-gradient-to-r from-emerald-600 to-teal-600 text-lg" data-testid="hero-cta-primary">
-              Get Free Consultation
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Button size="lg" variant="outline" className="text-lg border-2" data-testid="hero-cta-secondary">
-              View Our Work
-            </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <button onClick={scrollToContact} className="apple-button-primary" data-testid="hero-cta-primary">
+              Get started
+            </button>
+            <button className="apple-button-secondary" data-testid="hero-cta-secondary">
+              Learn more
+            </button>
           </div>
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-16 bg-gradient-to-r from-emerald-600 to-teal-600" data-testid="stats-section">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white">
+      {/* Stats Section - Minimal */}
+      <section className="py-20 bg-gray-50" data-testid="stats-section">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
             <div data-testid="stat-projects">
-              <div className="text-4xl font-bold mb-2">150+</div>
-              <div className="text-emerald-100">Projects Delivered</div>
+              <div className="text-5xl font-semibold mb-2 text-gray-900">150+</div>
+              <div className="text-sm text-gray-600">Projects Delivered</div>
             </div>
             <div data-testid="stat-clients">
-              <div className="text-4xl font-bold mb-2">80+</div>
-              <div className="text-emerald-100">Happy Clients</div>
+              <div className="text-5xl font-semibold mb-2 text-gray-900">80+</div>
+              <div className="text-sm text-gray-600">Happy Clients</div>
             </div>
             <div data-testid="stat-years">
-              <div className="text-4xl font-bold mb-2">8+</div>
-              <div className="text-emerald-100">Years Experience</div>
+              <div className="text-5xl font-semibold mb-2 text-gray-900">8+</div>
+              <div className="text-sm text-gray-600">Years Experience</div>
             </div>
             <div data-testid="stat-rating">
-              <div className="text-4xl font-bold mb-2">4.9/5</div>
-              <div className="text-emerald-100">Client Rating</div>
+              <div className="text-5xl font-semibold mb-2 text-gray-900">4.9</div>
+              <div className="text-sm text-gray-600">Client Rating</div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
-      <section id="services" className="py-20 px-4 sm:px-6 lg:px-8" data-testid="services-section">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4 text-slate-900" data-testid="services-title">What We Do</h2>
-            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              End-to-end technology solutions tailored to your unique business needs
-            </p>
+      {/* Services Section - Apple Style */}
+      <section id="services" className="py-24 px-6 bg-white" data-testid="services-section">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-20">
+            <h2 className="text-5xl md:text-6xl font-semibold mb-4 text-gray-900" data-testid="services-title">What we do.</h2>
+            <p className="text-xl text-gray-600">Tailored solutions for your unique needs</p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-2 hover:border-emerald-200" data-testid="service-salesforce">
-              <CardHeader>
-                <div className="w-14 h-14 bg-gradient-to-br from-emerald-600 to-teal-600 rounded-lg flex items-center justify-center mb-4">
-                  <Code className="h-7 w-7 text-white" />
-                </div>
-                <CardTitle>Salesforce Services</CardTitle>
-                <CardDescription>
-                  Expert customization, technical solutions, and development work
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 text-sm text-slate-600">
-                  <li className="flex items-center">
-                    <CheckCircle className="h-4 w-4 mr-2 text-green-500" />
-                    Custom Salesforce Development
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="h-4 w-4 mr-2 text-green-500" />
-                    Integration & Migration
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="h-4 w-4 mr-2 text-green-500" />
-                    Workflow Automation
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="h-4 w-4 mr-2 text-green-500" />
-                    Technical Consulting
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
+            <div className="apple-card" data-testid="service-salesforce">
+              <div className="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center mb-6">
+                <Code className="h-6 w-6 text-white" />
+              </div>
+              <h3 className="text-2xl font-semibold mb-3 text-gray-900">Salesforce Services</h3>
+              <p className="text-gray-600 mb-6">
+                Expert customization, technical solutions, and development work
+              </p>
+              <ul className="space-y-3 text-sm text-gray-600">
+                <li>Custom Salesforce Development</li>
+                <li>Integration & Migration</li>
+                <li>Workflow Automation</li>
+                <li>Technical Consulting</li>
+              </ul>
+            </div>
 
-            <Card className="hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-2 hover:border-emerald-200" data-testid="service-mobile">
-              <CardHeader>
-                <div className="w-14 h-14 bg-gradient-to-br from-emerald-600 to-teal-600 rounded-lg flex items-center justify-center mb-4">
-                  <Smartphone className="h-7 w-7 text-white" />
-                </div>
-                <CardTitle>Mobile App Development</CardTitle>
-                <CardDescription>
-                  Creating innovative mobile applications for iOS and Android
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 text-sm text-slate-600">
-                  <li className="flex items-center">
-                    <CheckCircle className="h-4 w-4 mr-2 text-green-500" />
-                    Native & Cross-Platform Apps
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="h-4 w-4 mr-2 text-green-500" />
-                    UI/UX Design
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="h-4 w-4 mr-2 text-green-500" />
-                    App Store Optimization
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="h-4 w-4 mr-2 text-green-500" />
-                    Maintenance & Support
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
+            <div className="apple-card" data-testid="service-mobile">
+              <div className="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center mb-6">
+                <Smartphone className="h-6 w-6 text-white" />
+              </div>
+              <h3 className="text-2xl font-semibold mb-3 text-gray-900">Mobile App Development</h3>
+              <p className="text-gray-600 mb-6">
+                Creating innovative mobile applications for iOS and Android
+              </p>
+              <ul className="space-y-3 text-sm text-gray-600">
+                <li>Native & Cross-Platform Apps</li>
+                <li>UI/UX Design</li>
+                <li>App Store Optimization</li>
+                <li>Maintenance & Support</li>
+              </ul>
+            </div>
 
-            <Card className="hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-2 hover:border-emerald-200" data-testid="service-web">
-              <CardHeader>
-                <div className="w-14 h-14 bg-gradient-to-br from-emerald-600 to-teal-600 rounded-lg flex items-center justify-center mb-4">
-                  <Globe className="h-7 w-7 text-white" />
-                </div>
-                <CardTitle>Web Development</CardTitle>
-                <CardDescription>
-                  Website creation, digital presence, and web solutions
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 text-sm text-slate-600">
-                  <li className="flex items-center">
-                    <CheckCircle className="h-4 w-4 mr-2 text-green-500" />
-                    Custom Web Applications
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="h-4 w-4 mr-2 text-green-500" />
-                    E-commerce Solutions
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="h-4 w-4 mr-2 text-green-500" />
-                    Progressive Web Apps
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="h-4 w-4 mr-2 text-green-500" />
-                    Performance Optimization
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
+            <div className="apple-card" data-testid="service-web">
+              <div className="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center mb-6">
+                <Globe className="h-6 w-6 text-white" />
+              </div>
+              <h3 className="text-2xl font-semibold mb-3 text-gray-900">Web Development</h3>
+              <p className="text-gray-600 mb-6">
+                Website creation, digital presence, and web solutions
+              </p>
+              <ul className="space-y-3 text-sm text-gray-600">
+                <li>Custom Web Applications</li>
+                <li>E-commerce Solutions</li>
+                <li>Progressive Web Apps</li>
+                <li>Performance Optimization</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Why Choose Us */}
-      <section className="py-20 bg-slate-50 px-4 sm:px-6 lg:px-8" data-testid="why-choose-section">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4 text-slate-900" data-testid="why-choose-title">Why Choose Origem</h2>
-            <p className="text-xl text-slate-600">What sets us apart from the rest</p>
+      {/* Why Choose Us - Minimal */}
+      <section className="py-24 bg-gray-50 px-6" data-testid="why-choose-section">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-20">
+            <h2 className="text-5xl md:text-6xl font-semibold mb-4 text-gray-900" data-testid="why-choose-title">Why Origem.</h2>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
             <div className="text-center" data-testid="feature-customized">
-              <div className="w-16 h-16 bg-gradient-to-br from-emerald-600 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Target className="h-8 w-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Customized Solutions</h3>
-              <p className="text-slate-600">No one-size-fits-all—everything we deliver is tailored to your business</p>
+              <h3 className="text-xl font-semibold mb-3 text-gray-900">Customized Solutions</h3>
+              <p className="text-gray-600">Everything we deliver is tailored to your business</p>
             </div>
             <div className="text-center" data-testid="feature-team">
-              <div className="w-16 h-16 bg-gradient-to-br from-emerald-600 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="h-8 w-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Expert Team</h3>
-              <p className="text-slate-600">Certified professionals with years of experience in their domains</p>
+              <h3 className="text-xl font-semibold mb-3 text-gray-900">Expert Team</h3>
+              <p className="text-gray-600">Certified professionals with years of experience</p>
             </div>
             <div className="text-center" data-testid="feature-support">
-              <div className="w-16 h-16 bg-gradient-to-br from-emerald-600 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Award className="h-8 w-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">End-to-End Support</h3>
-              <p className="text-slate-600">From ideation to launch and beyond, we're with you every step</p>
+              <h3 className="text-xl font-semibold mb-3 text-gray-900">End-to-End Support</h3>
+              <p className="text-gray-600">We're with you every step of the way</p>
             </div>
             <div className="text-center" data-testid="feature-impact">
-              <div className="w-16 h-16 bg-gradient-to-br from-emerald-600 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <TrendingUp className="h-8 w-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Business Impact</h3>
-              <p className="text-slate-600">Solutions designed to deliver measurable growth and efficiency</p>
+              <h3 className="text-xl font-semibold mb-3 text-gray-900">Business Impact</h3>
+              <p className="text-gray-600">Measurable growth and efficiency</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Portfolio Section */}
-      <section id="portfolio" className="py-20 px-4 sm:px-6 lg:px-8" data-testid="portfolio-section">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4 text-slate-900" data-testid="portfolio-title">Our Recent Work</h2>
-            <p className="text-xl text-slate-600">Showcasing projects that made an impact</p>
+      <section id="portfolio" className="py-24 px-6 bg-white" data-testid="portfolio-section">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-20">
+            <h2 className="text-5xl md:text-6xl font-semibold mb-4 text-gray-900" data-testid="portfolio-title">Our work.</h2>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="overflow-hidden hover:shadow-xl transition-all duration-300" data-testid="portfolio-item-1">
-              <div className="h-48 bg-gradient-to-br from-purple-400 to-pink-400 flex items-center justify-center">
-                <Code className="h-20 w-20 text-white opacity-50" />
+            <div className="apple-card" data-testid="portfolio-item-1">
+              <div className="h-64 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl mb-6 flex items-center justify-center">
+                <Code className="h-20 w-20 text-blue-600 opacity-30" />
               </div>
-              <CardHeader>
-                <CardTitle>E-Commerce Platform</CardTitle>
-                <CardDescription>Custom Salesforce integration for online retail</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-slate-600 mb-4">
-                  Built a comprehensive e-commerce solution with Salesforce backend, handling 10K+ daily transactions.
-                </p>
-                <div className="flex gap-2 flex-wrap">
-                  <Badge variant="secondary">Salesforce</Badge>
-                  <Badge variant="secondary">React</Badge>
-                  <Badge variant="secondary">API Integration</Badge>
-                </div>
-              </CardContent>
-            </Card>
+              <h3 className="text-xl font-semibold mb-2 text-gray-900">E-Commerce Platform</h3>
+              <p className="text-gray-600 mb-4">Custom Salesforce integration for online retail</p>
+              <a href="#" className="text-blue-600 text-sm inline-flex items-center hover:underline">
+                Learn more <ChevronRight className="h-4 w-4 ml-1" />
+              </a>
+            </div>
 
-            <Card className="overflow-hidden hover:shadow-xl transition-all duration-300" data-testid="portfolio-item-2">
-              <div className="h-48 bg-gradient-to-br from-blue-400 to-cyan-400 flex items-center justify-center">
-                <Smartphone className="h-20 w-20 text-white opacity-50" />
+            <div className="apple-card" data-testid="portfolio-item-2">
+              <div className="h-64 bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl mb-6 flex items-center justify-center">
+                <Smartphone className="h-20 w-20 text-gray-600 opacity-30" />
               </div>
-              <CardHeader>
-                <CardTitle>Healthcare Mobile App</CardTitle>
-                <CardDescription>Patient management system for iOS & Android</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-slate-600 mb-4">
-                  Developed a secure mobile app for patient records, appointments, and telemedicine consultations.
-                </p>
-                <div className="flex gap-2 flex-wrap">
-                  <Badge variant="secondary">React Native</Badge>
-                  <Badge variant="secondary">Healthcare</Badge>
-                  <Badge variant="secondary">HIPAA Compliant</Badge>
-                </div>
-              </CardContent>
-            </Card>
+              <h3 className="text-xl font-semibold mb-2 text-gray-900">Healthcare Mobile App</h3>
+              <p className="text-gray-600 mb-4">Patient management system for iOS & Android</p>
+              <a href="#" className="text-blue-600 text-sm inline-flex items-center hover:underline">
+                Learn more <ChevronRight className="h-4 w-4 ml-1" />
+              </a>
+            </div>
 
-            <Card className="overflow-hidden hover:shadow-xl transition-all duration-300" data-testid="portfolio-item-3">
-              <div className="h-48 bg-gradient-to-br from-green-400 to-emerald-400 flex items-center justify-center">
-                <Globe className="h-20 w-20 text-white opacity-50" />
+            <div className="apple-card" data-testid="portfolio-item-3">
+              <div className="h-64 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl mb-6 flex items-center justify-center">
+                <Globe className="h-20 w-20 text-blue-600 opacity-30" />
               </div>
-              <CardHeader>
-                <CardTitle>Corporate Website</CardTitle>
-                <CardDescription>Modern web presence for Fortune 500 company</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-slate-600 mb-4">
-                  Redesigned corporate website with focus on performance, accessibility, and user experience.
-                </p>
-                <div className="flex gap-2 flex-wrap">
-                  <Badge variant="secondary">Next.js</Badge>
-                  <Badge variant="secondary">SEO</Badge>
-                  <Badge variant="secondary">Analytics</Badge>
-                </div>
-              </CardContent>
-            </Card>
+              <h3 className="text-xl font-semibold mb-2 text-gray-900">Corporate Website</h3>
+              <p className="text-gray-600 mb-4">Modern web presence for Fortune 500 company</p>
+              <a href="#" className="text-blue-600 text-sm inline-flex items-center hover:underline">
+                Learn more <ChevronRight className="h-4 w-4 ml-1" />
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Testimonials Section */}
-      <section id="testimonials" className="py-20 bg-slate-50 px-4 sm:px-6 lg:px-8" data-testid="testimonials-section">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4 text-slate-900" data-testid="testimonials-title">What Our Clients Say</h2>
-            <p className="text-xl text-slate-600">Don't just take our word for it</p>
+      <section id="testimonials" className="py-24 bg-gray-50 px-6" data-testid="testimonials-section">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-20">
+            <h2 className="text-5xl md:text-6xl font-semibold mb-4 text-gray-900" data-testid="testimonials-title">What clients say.</h2>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial) => (
-              <Card key={testimonial.id} className="hover:shadow-xl transition-all duration-300" data-testid={`testimonial-${testimonial.id}`}>
-                <CardHeader>
-                  <div className="flex items-center space-x-4">
-                    <img
-                      src={testimonial.image}
-                      alt={testimonial.name}
-                      className="w-12 h-12 rounded-full"
-                    />
-                    <div>
-                      <CardTitle className="text-lg">{testimonial.name}</CardTitle>
-                      <CardDescription>{testimonial.role}</CardDescription>
-                    </div>
+              <div key={testimonial.id} className="bg-white rounded-3xl p-8 shadow-sm" data-testid={`testimonial-${testimonial.id}`}>
+                <p className="text-gray-900 mb-6 text-lg">"{testimonial.content}"</p>
+                <div className="flex items-center space-x-3">
+                  <img
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    className="w-10 h-10 rounded-full"
+                  />
+                  <div>
+                    <div className="font-semibold text-gray-900 text-sm">{testimonial.name}</div>
+                    <div className="text-gray-600 text-xs">{testimonial.role}</div>
                   </div>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex mb-3">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                    ))}
-                  </div>
-                  <p className="text-slate-600">{testimonial.content}</p>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
       {/* Technology Stack */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8" data-testid="tech-stack-section">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-4 text-slate-900" data-testid="tech-stack-title">Technologies We Work With</h2>
-          <p className="text-xl text-slate-600 mb-12">Cutting-edge tools and frameworks</p>
+      <section className="py-24 px-6 bg-white" data-testid="tech-stack-section">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-semibold mb-4 text-gray-900" data-testid="tech-stack-title">Technologies.</h2>
+          <p className="text-xl text-gray-600 mb-12">Cutting-edge tools and frameworks</p>
           <div className="flex flex-wrap justify-center gap-4">
             {['Salesforce', 'React', 'React Native', 'Node.js', 'Python', 'MongoDB', 'AWS', 'TypeScript', 'GraphQL', 'Docker', 'Kubernetes', 'Next.js'].map((tech) => (
-              <Badge key={tech} variant="outline" className="text-lg py-2 px-4" data-testid={`tech-${tech.toLowerCase().replace(/\./g, '-')}`}>
+              <span key={tech} className="px-6 py-2 bg-gray-100 rounded-full text-sm text-gray-900" data-testid={`tech-${tech.toLowerCase().replace(/\./g, '-')}`}>
                 {tech}
-              </Badge>
+              </span>
             ))}
           </div>
         </div>
       </section>
 
       {/* FAQ Section */}
-      <section id="faq" className="py-20 bg-slate-50 px-4 sm:px-6 lg:px-8" data-testid="faq-section">
+      <section id="faq" className="py-24 bg-gray-50 px-6" data-testid="faq-section">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4 text-slate-900" data-testid="faq-title">Frequently Asked Questions</h2>
-            <p className="text-xl text-slate-600">Got questions? We've got answers</p>
+            <h2 className="text-5xl md:text-6xl font-semibold mb-4 text-gray-900" data-testid="faq-title">Questions.</h2>
           </div>
-          <Accordion type="single" collapsible className="w-full">
-            <AccordionItem value="item-1" data-testid="faq-item-1">
-              <AccordionTrigger className="text-left">What services does Origem provide?</AccordionTrigger>
-              <AccordionContent>
+          <Accordion type="single" collapsible className="w-full space-y-4">
+            <AccordionItem value="item-1" className="border-b border-gray-200" data-testid="faq-item-1">
+              <AccordionTrigger className="text-left text-lg font-medium hover:text-gray-600">What services does Origem provide?</AccordionTrigger>
+              <AccordionContent className="text-gray-600">
                 We specialize in three main areas: Salesforce services (customization, integration, and consulting), 
-                Mobile App Development (iOS and Android), and Web Development (custom websites and web applications). 
-                We provide end-to-end solutions tailored to your business needs.
+                Mobile App Development (iOS and Android), and Web Development (custom websites and web applications).
               </AccordionContent>
             </AccordionItem>
-            <AccordionItem value="item-2" data-testid="faq-item-2">
-              <AccordionTrigger className="text-left">How long does a typical project take?</AccordionTrigger>
-              <AccordionContent>
+            <AccordionItem value="item-2" className="border-b border-gray-200" data-testid="faq-item-2">
+              <AccordionTrigger className="text-left text-lg font-medium hover:text-gray-600">How long does a typical project take?</AccordionTrigger>
+              <AccordionContent className="text-gray-600">
                 Project timelines vary depending on complexity and scope. A simple website might take 4-6 weeks, 
-                while a complex Salesforce implementation or mobile app could take 3-6 months. We provide detailed 
-                timelines during our consultation phase.
+                while a complex Salesforce implementation or mobile app could take 3-6 months.
               </AccordionContent>
             </AccordionItem>
-            <AccordionItem value="item-3" data-testid="faq-item-3">
-              <AccordionTrigger className="text-left">Do you provide post-launch support?</AccordionTrigger>
-              <AccordionContent>
+            <AccordionItem value="item-3" className="border-b border-gray-200" data-testid="faq-item-3">
+              <AccordionTrigger className="text-left text-lg font-medium hover:text-gray-600">Do you provide post-launch support?</AccordionTrigger>
+              <AccordionContent className="text-gray-600">
                 Yes! We offer comprehensive post-launch support and maintenance packages. This includes bug fixes, 
-                updates, performance monitoring, and feature enhancements. We're committed to your long-term success.
+                updates, performance monitoring, and feature enhancements.
               </AccordionContent>
             </AccordionItem>
-            <AccordionItem value="item-4" data-testid="faq-item-4">
-              <AccordionTrigger className="text-left">What is your pricing model?</AccordionTrigger>
-              <AccordionContent>
+            <AccordionItem value="item-4" className="border-b border-gray-200" data-testid="faq-item-4">
+              <AccordionTrigger className="text-left text-lg font-medium hover:text-gray-600">What is your pricing model?</AccordionTrigger>
+              <AccordionContent className="text-gray-600">
                 We offer flexible pricing models including fixed-price projects, time and materials, and retainer arrangements. 
-                The best approach depends on your project scope and requirements. Contact us for a customized quote.
+                The best approach depends on your project scope and requirements.
               </AccordionContent>
             </AccordionItem>
-            <AccordionItem value="item-5" data-testid="faq-item-5">
-              <AccordionTrigger className="text-left">Can you work with our existing systems?</AccordionTrigger>
-              <AccordionContent>
+            <AccordionItem value="item-5" className="border-b border-gray-200" data-testid="faq-item-5">
+              <AccordionTrigger className="text-left text-lg font-medium hover:text-gray-600">Can you work with our existing systems?</AccordionTrigger>
+              <AccordionContent className="text-gray-600">
                 Absolutely! We specialize in integrating with existing systems, whether it's connecting to your current 
-                Salesforce setup, legacy databases, or third-party APIs. We ensure seamless integration without disrupting 
-                your operations.
+                Salesforce setup, legacy databases, or third-party APIs.
               </AccordionContent>
             </AccordionItem>
           </Accordion>
@@ -492,103 +371,100 @@ function App() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8" data-testid="contact-section">
-        <div className="max-w-5xl mx-auto">
+      <section id="contact" className="py-24 px-6 bg-white" data-testid="contact-section">
+        <div className="max-w-3xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4 text-slate-900" data-testid="contact-title">Let's Start a Conversation</h2>
-            <p className="text-xl text-slate-600">Your success starts here. Tell us about your project</p>
+            <h2 className="text-5xl md:text-6xl font-semibold mb-4 text-gray-900" data-testid="contact-title">Get in touch.</h2>
+            <p className="text-xl text-gray-600">Tell us about your project</p>
           </div>
-          <Card className="border-2" data-testid="contact-form-card">
-            <CardHeader>
-              <CardTitle>Get in Touch</CardTitle>
-              <CardDescription>Fill out the form below and we'll get back to you within 24 hours</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <form onSubmit={handleContactSubmit} className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <Label htmlFor="name">Full Name</Label>
-                    <Input
-                      id="name"
-                      placeholder="John Doe"
-                      value={contactForm.name}
-                      onChange={(e) => setContactForm({ ...contactForm, name: e.target.value })}
-                      required
-                      data-testid="contact-name-input"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="email">Email Address</Label>
-                    <Input
-                      id="email"
-                      type="email"
-                      placeholder="john@example.com"
-                      value={contactForm.email}
-                      onChange={(e) => setContactForm({ ...contactForm, email: e.target.value })}
-                      required
-                      data-testid="contact-email-input"
-                    />
-                  </div>
-                </div>
-                <div className="grid md:grid-cols-4 gap-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="country_code">Code</Label>
-                    <Select
-                      value={contactForm.country_code}
-                      onValueChange={(value) => setContactForm({ ...contactForm, country_code: value })}
-                    >
-                      <SelectTrigger id="country_code" data-testid="contact-country-code-select">
-                        <SelectValue />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="+1">🇺🇸 +1</SelectItem>
-                        <SelectItem value="+91">🇮🇳 +91</SelectItem>
-                        <SelectItem value="+44">🇬🇧 +44</SelectItem>
-                        <SelectItem value="+61">🇦🇺 +61</SelectItem>
-                        <SelectItem value="+81">🇯🇵 +81</SelectItem>
-                        <SelectItem value="+86">🇨🇳 +86</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-                  <div className="space-y-2 md:col-span-3">
-                    <Label htmlFor="phone">Phone Number</Label>
-                    <Input
-                      id="phone"
-                      placeholder="1234567890"
-                      value={contactForm.phone}
-                      onChange={(e) => setContactForm({ ...contactForm, phone: e.target.value })}
-                      required
-                      data-testid="contact-phone-input"
-                    />
-                  </div>
-                </div>
+          <div className="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100" data-testid="contact-form-card">
+            <form onSubmit={handleContactSubmit} className="space-y-6">
+              <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <Label htmlFor="message">Your Message</Label>
-                  <Textarea
-                    id="message"
-                    placeholder="Tell us about your project..."
-                    rows={5}
-                    value={contactForm.message}
-                    onChange={(e) => setContactForm({ ...contactForm, message: e.target.value })}
+                  <Label htmlFor="name" className="text-sm text-gray-900">Name</Label>
+                  <Input
+                    id="name"
+                    placeholder="John Doe"
+                    value={contactForm.name}
+                    onChange={(e) => setContactForm({ ...contactForm, name: e.target.value })}
                     required
-                    data-testid="contact-message-textarea"
+                    className="apple-input"
+                    data-testid="contact-name-input"
                   />
                 </div>
-                <Button
-                  type="submit"
-                  size="lg"
-                  className="w-full bg-gradient-to-r from-emerald-600 to-teal-600"
-                  disabled={isSubmitting}
-                  data-testid="contact-submit-button"
-                >
-                  {isSubmitting ? 'Sending...' : 'Send Message'}
-                </Button>
-              </form>
-            </CardContent>
-          </Card>
+                <div className="space-y-2">
+                  <Label htmlFor="email" className="text-sm text-gray-900">Email</Label>
+                  <Input
+                    id="email"
+                    type="email"
+                    placeholder="john@example.com"
+                    value={contactForm.email}
+                    onChange={(e) => setContactForm({ ...contactForm, email: e.target.value })}
+                    required
+                    className="apple-input"
+                    data-testid="contact-email-input"
+                  />
+                </div>
+              </div>
+              <div className="grid md:grid-cols-4 gap-4">
+                <div className="space-y-2">
+                  <Label htmlFor="country_code" className="text-sm text-gray-900">Code</Label>
+                  <Select
+                    value={contactForm.country_code}
+                    onValueChange={(value) => setContactForm({ ...contactForm, country_code: value })}
+                  >
+                    <SelectTrigger id="country_code" className="apple-input" data-testid="contact-country-code-select">
+                      <SelectValue />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="+1">🇺🇸 +1</SelectItem>
+                      <SelectItem value="+91">🇮🇳 +91</SelectItem>
+                      <SelectItem value="+44">🇬🇧 +44</SelectItem>
+                      <SelectItem value="+61">🇦🇺 +61</SelectItem>
+                      <SelectItem value="+81">🇯🇵 +81</SelectItem>
+                      <SelectItem value="+86">🇨🇳 +86</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+                <div className="space-y-2 md:col-span-3">
+                  <Label htmlFor="phone" className="text-sm text-gray-900">Phone</Label>
+                  <Input
+                    id="phone"
+                    placeholder="1234567890"
+                    value={contactForm.phone}
+                    onChange={(e) => setContactForm({ ...contactForm, phone: e.target.value })}
+                    required
+                    className="apple-input"
+                    data-testid="contact-phone-input"
+                  />
+                </div>
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="message" className="text-sm text-gray-900">Message</Label>
+                <Textarea
+                  id="message"
+                  placeholder="Tell us about your project..."
+                  rows={5}
+                  value={contactForm.message}
+                  onChange={(e) => setContactForm({ ...contactForm, message: e.target.value })}
+                  required
+                  className="apple-input"
+                  data-testid="contact-message-textarea"
+                />
+              </div>
+              <button
+                type="submit"
+                className="apple-button-primary w-full"
+                disabled={isSubmitting}
+                data-testid="contact-submit-button"
+              >
+                {isSubmitting ? 'Sending...' : 'Submit'}
+              </button>
+            </form>
+          </div>
           <div className="text-center mt-8">
-            <p className="text-slate-600 mb-2">Or call us directly:</p>
-            <a href="tel:+918983609962" className="text-2xl font-semibold text-emerald-600 hover:text-emerald-700" data-testid="contact-phone-link">
+            <p className="text-gray-600 mb-2">Or call</p>
+            <a href="tel:+918983609962" className="text-2xl font-semibold text-blue-600 hover:underline" data-testid="contact-phone-link">
               (+91) 89836 09962
             </a>
           </div>
@@ -596,66 +472,65 @@ function App() {
       </section>
 
       {/* Newsletter Section */}
-      <section className="py-16 bg-gradient-to-r from-emerald-600 to-teal-600" data-testid="newsletter-section">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4" data-testid="newsletter-title">Stay Updated</h2>
-          <p className="text-emerald-100 mb-8">Subscribe to our newsletter for the latest insights and updates</p>
+      <section className="py-20 bg-gray-900 text-white" data-testid="newsletter-section">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <h2 className="text-4xl font-semibold mb-4" data-testid="newsletter-title">Stay informed.</h2>
+          <p className="text-gray-400 mb-8">Get updates and insights delivered to your inbox.</p>
           <form onSubmit={handleNewsletterSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
             <Input
               type="email"
-              placeholder="Enter your email"
+              placeholder="Email address"
               value={newsletterEmail}
               onChange={(e) => setNewsletterEmail(e.target.value)}
               required
-              className="bg-white"
+              className="apple-input bg-gray-800 border-gray-700 text-white placeholder:text-gray-500"
               data-testid="newsletter-email-input"
             />
-            <Button type="submit" variant="secondary" data-testid="newsletter-submit-button">
+            <button type="submit" className="apple-button-secondary-white" data-testid="newsletter-submit-button">
               Subscribe
-            </Button>
+            </button>
           </form>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-slate-900 text-white py-12 px-4 sm:px-6 lg:px-8" data-testid="footer">
-        <div className="max-w-7xl mx-auto">
+      <footer className="bg-gray-50 py-12 px-6 border-t border-gray-200" data-testid="footer">
+        <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
-              <div className="flex items-center space-x-2 mb-4">
-                <Sparkles className="h-6 w-6 text-emerald-400" />
-                <span className="text-2xl font-bold">Or!gem</span>
-              </div>
-              <p className="text-slate-400">Transforming ideas into reality through innovative technology solutions.</p>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-4">Services</h3>
-              <ul className="space-y-2 text-slate-400">
-                <li><a href="#services" className="hover:text-emerald-400 transition">Salesforce Services</a></li>
-                <li><a href="#services" className="hover:text-emerald-400 transition">Mobile Development</a></li>
-                <li><a href="#services" className="hover:text-emerald-400 transition">Web Development</a></li>
+              <h3 className="font-semibold mb-4 text-gray-900 text-sm">Services</h3>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li><a href="#services" className="hover:text-gray-900">Salesforce Services</a></li>
+                <li><a href="#services" className="hover:text-gray-900">Mobile Development</a></li>
+                <li><a href="#services" className="hover:text-gray-900">Web Development</a></li>
               </ul>
             </div>
             <div>
-              <h3 className="font-semibold mb-4">Company</h3>
-              <ul className="space-y-2 text-slate-400">
-                <li><a href="#portfolio" className="hover:text-emerald-400 transition">Portfolio</a></li>
-                <li><a href="#testimonials" className="hover:text-emerald-400 transition">Testimonials</a></li>
-                <li><a href="#faq" className="hover:text-emerald-400 transition">FAQ</a></li>
+              <h3 className="font-semibold mb-4 text-gray-900 text-sm">Company</h3>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li><a href="#portfolio" className="hover:text-gray-900">Portfolio</a></li>
+                <li><a href="#testimonials" className="hover:text-gray-900">Testimonials</a></li>
+                <li><a href="#faq" className="hover:text-gray-900">FAQ</a></li>
               </ul>
             </div>
             <div>
-              <h3 className="font-semibold mb-4">Connect</h3>
-              <ul className="space-y-2 text-slate-400">
-                <li><a href="#" className="hover:text-emerald-400 transition">LinkedIn</a></li>
-                <li><a href="#" className="hover:text-emerald-400 transition">Twitter</a></li>
-                <li><a href="#" className="hover:text-emerald-400 transition">Facebook</a></li>
-                <li><a href="#contact" className="hover:text-emerald-400 transition">Contact Us</a></li>
+              <h3 className="font-semibold mb-4 text-gray-900 text-sm">Connect</h3>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li><a href="#" className="hover:text-gray-900">LinkedIn</a></li>
+                <li><a href="#" className="hover:text-gray-900">Twitter</a></li>
+                <li><a href="#" className="hover:text-gray-900">Facebook</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-semibold mb-4 text-gray-900 text-sm">Contact</h3>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li><a href="#contact" className="hover:text-gray-900">Get in Touch</a></li>
+                <li><a href="tel:+918983609962" className="hover:text-gray-900">(+91) 89836 09962</a></li>
               </ul>
             </div>
           </div>
-          <div className="border-t border-slate-800 pt-8 text-center text-slate-400">
-            <p>&copy; 2025 Origem Consulting. All rights reserved.</p>
+          <div className="border-t border-gray-200 pt-8 text-center text-sm text-gray-600">
+            <p>© 2025 Origem Consulting. All rights reserved.</p>
           </div>
         </div>
       </footer>
