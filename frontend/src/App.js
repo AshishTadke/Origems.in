@@ -216,13 +216,13 @@ function App() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-24 bg-gray-800 px-6" data-testid="why-choose-section">
+      <section className="py-24 bg-gray-800 px-6 scroll-reveal" data-testid="why-choose-section">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-20">
+          <div className="text-center mb-20 scroll-reveal">
             <h2 className="text-5xl md:text-6xl font-semibold mb-4 text-white" data-testid="why-choose-title">Why Origem.</h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 stagger-children">
-            <div className="text-center hover-lift" data-testid="feature-customized">
+            <div className="text-center hover-lift scroll-reveal scroll-reveal-bottom" data-testid="feature-customized">
               <h3 className="text-xl font-semibold mb-3 text-white">Customized Solutions</h3>
               <p className="text-gray-400">Everything we deliver is tailored to your business</p>
             </div>
