@@ -226,15 +226,15 @@ function App() {
               <h3 className="text-xl font-semibold mb-3 text-white">Customized Solutions</h3>
               <p className="text-gray-400">Everything we deliver is tailored to your business</p>
             </div>
-            <div className="text-center hover-lift" data-testid="feature-team">
+            <div className="text-center hover-lift scroll-reveal scroll-reveal-bottom" data-testid="feature-team">
               <h3 className="text-xl font-semibold mb-3 text-white">Expert Team</h3>
               <p className="text-gray-400">Certified professionals with years of experience</p>
             </div>
-            <div className="text-center hover-lift" data-testid="feature-support">
+            <div className="text-center hover-lift scroll-reveal scroll-reveal-bottom" data-testid="feature-support">
               <h3 className="text-xl font-semibold mb-3 text-white">End-to-End Support</h3>
               <p className="text-gray-400">We're with you every step of the way</p>
             </div>
-            <div className="text-center hover-lift" data-testid="feature-impact">
+            <div className="text-center hover-lift scroll-reveal scroll-reveal-bottom" data-testid="feature-impact">
               <h3 className="text-xl font-semibold mb-3 text-white">Business Impact</h3>
               <p className="text-gray-400">Measurable growth and efficiency</p>
             </div>
