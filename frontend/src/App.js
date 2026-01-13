@@ -159,12 +159,12 @@ function App() {
       {/* Services Section */}
       <section id="services" className="py-24 px-6 bg-gray-900" data-testid="services-section">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-20">
+          <div className="text-center mb-20 scroll-reveal">
             <h2 className="text-5xl md:text-6xl font-semibold mb-4 text-white" data-testid="services-title">What we do.</h2>
             <p className="text-xl text-gray-400">Tailored solutions for your unique needs</p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="apple-card-dark" data-testid="service-salesforce">
+            <div className="apple-card-dark scroll-reveal scroll-reveal-left" data-testid="service-salesforce">
               <div className="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center mb-6 icon-rotate">
                 <Code className="h-6 w-6 text-white" />
               </div>
