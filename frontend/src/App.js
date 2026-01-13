@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import '@/App.css';
 import axios from 'axios';
 import { Button } from '@/components/ui/button';
@@ -26,6 +26,28 @@ function App() {
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // Scroll animation hook
+  useEffect(() => {
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('scroll-reveal-active');
+        }
+      });
+    }, observerOptions);
+
+    // Observe all elements with scroll-reveal class
+    const revealElements = document.querySelectorAll('.scroll-reveal');
+    revealElements.forEach(el => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, [testimonials]); // Re-run when testimonials load
 
   useEffect(() => {
     fetchTestimonials();
