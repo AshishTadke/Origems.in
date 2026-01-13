@@ -260,7 +260,7 @@ function App() {
               </a>
             </div>
 
-            <div className="apple-card-dark portfolio-item" data-testid="portfolio-item-2">
+            <div className="apple-card-dark portfolio-item scroll-reveal scroll-reveal-scale" data-testid="portfolio-item-2">
               <div className="h-64 bg-gradient-to-br from-gray-800/50 to-gray-700/50 rounded-2xl mb-6 flex items-center justify-center overflow-hidden">
                 <Smartphone className="h-20 w-20 text-gray-500 opacity-30" />
               </div>
@@ -271,7 +271,7 @@ function App() {
               </a>
             </div>
 
-            <div className="apple-card-dark portfolio-item" data-testid="portfolio-item-3">
+            <div className="apple-card-dark portfolio-item scroll-reveal scroll-reveal-right" data-testid="portfolio-item-3">
               <div className="h-64 bg-gradient-to-br from-blue-900/30 to-blue-800/30 rounded-2xl mb-6 flex items-center justify-center overflow-hidden">
                 <Globe className="h-20 w-20 text-blue-400 opacity-30" />
               </div>
