@@ -240,41 +240,41 @@ function App() {
       </section>
 
       {/* Portfolio Section */}
-      <section id="portfolio" className="py-24 px-6 bg-white" data-testid="portfolio-section">
+      <section id="portfolio" className="py-24 px-6 bg-gray-900" data-testid="portfolio-section">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-20">
-            <h2 className="text-5xl md:text-6xl font-semibold mb-4 text-gray-900" data-testid="portfolio-title">Our work.</h2>
+            <h2 className="text-5xl md:text-6xl font-semibold mb-4 text-white" data-testid="portfolio-title">Our work.</h2>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="apple-card" data-testid="portfolio-item-1">
-              <div className="h-64 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl mb-6 flex items-center justify-center">
-                <Code className="h-20 w-20 text-blue-600 opacity-30" />
+            <div className="apple-card-dark" data-testid="portfolio-item-1">
+              <div className="h-64 bg-gradient-to-br from-blue-900/30 to-blue-800/30 rounded-2xl mb-6 flex items-center justify-center">
+                <Code className="h-20 w-20 text-blue-400 opacity-30" />
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-gray-900">E-Commerce Platform</h3>
-              <p className="text-gray-600 mb-4">Custom Salesforce integration for online retail</p>
-              <a href="#" className="text-blue-600 text-sm inline-flex items-center hover:underline">
+              <h3 className="text-xl font-semibold mb-2 text-white">E-Commerce Platform</h3>
+              <p className="text-gray-400 mb-4">Custom Salesforce integration for online retail</p>
+              <a href="#" className="text-blue-500 text-sm inline-flex items-center hover:underline">
                 Learn more <ChevronRight className="h-4 w-4 ml-1" />
               </a>
             </div>
 
-            <div className="apple-card" data-testid="portfolio-item-2">
-              <div className="h-64 bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl mb-6 flex items-center justify-center">
-                <Smartphone className="h-20 w-20 text-gray-600 opacity-30" />
+            <div className="apple-card-dark" data-testid="portfolio-item-2">
+              <div className="h-64 bg-gradient-to-br from-gray-800/50 to-gray-700/50 rounded-2xl mb-6 flex items-center justify-center">
+                <Smartphone className="h-20 w-20 text-gray-500 opacity-30" />
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-gray-900">Healthcare Mobile App</h3>
-              <p className="text-gray-600 mb-4">Patient management system for iOS & Android</p>
-              <a href="#" className="text-blue-600 text-sm inline-flex items-center hover:underline">
+              <h3 className="text-xl font-semibold mb-2 text-white">Healthcare Mobile App</h3>
+              <p className="text-gray-400 mb-4">Patient management system for iOS & Android</p>
+              <a href="#" className="text-blue-500 text-sm inline-flex items-center hover:underline">
                 Learn more <ChevronRight className="h-4 w-4 ml-1" />
               </a>
             </div>
 
-            <div className="apple-card" data-testid="portfolio-item-3">
-              <div className="h-64 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl mb-6 flex items-center justify-center">
-                <Globe className="h-20 w-20 text-blue-600 opacity-30" />
+            <div className="apple-card-dark" data-testid="portfolio-item-3">
+              <div className="h-64 bg-gradient-to-br from-blue-900/30 to-blue-800/30 rounded-2xl mb-6 flex items-center justify-center">
+                <Globe className="h-20 w-20 text-blue-400 opacity-30" />
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-gray-900">Corporate Website</h3>
-              <p className="text-gray-600 mb-4">Modern web presence for Fortune 500 company</p>
-              <a href="#" className="text-blue-600 text-sm inline-flex items-center hover:underline">
+              <h3 className="text-xl font-semibold mb-2 text-white">Corporate Website</h3>
+              <p className="text-gray-400 mb-4">Modern web presence for Fortune 500 company</p>
+              <a href="#" className="text-blue-500 text-sm inline-flex items-center hover:underline">
                 Learn more <ChevronRight className="h-4 w-4 ml-1" />
               </a>
             </div>
