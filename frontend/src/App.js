@@ -112,17 +112,17 @@ function App() {
       {/* Hero Section - Apple Style */}
       <section className="pt-32 pb-24 px-6" data-testid="hero-section">
         <div className="max-w-5xl mx-auto text-center">
-          <h1 className="text-6xl md:text-8xl font-semibold mb-6 text-gray-900 tracking-tight" data-testid="hero-title">
+          <h1 className="text-6xl md:text-8xl font-semibold mb-6 text-white tracking-tight" data-testid="hero-title">
             Your Partner in<br />Salesforce, Web<br />& Mobile Solutions
           </h1>
-          <p className="text-xl md:text-2xl text-gray-600 mb-8 font-normal" data-testid="hero-description">
+          <p className="text-xl md:text-2xl text-gray-400 mb-8 font-normal" data-testid="hero-description">
             End-to-end technology solutions that transform your business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <button onClick={scrollToContact} className="apple-button-primary" data-testid="hero-cta-primary">
               Get started
             </button>
-            <button className="apple-button-secondary" data-testid="hero-cta-secondary">
+            <button className="apple-button-secondary-dark" data-testid="hero-cta-secondary">
               Learn more
             </button>
           </div>
