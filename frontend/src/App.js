@@ -25,7 +25,6 @@ function App() {
     country_code: '+91',
     message: ''
   });
-  const [newsletterEmail, setNewsletterEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
@@ -63,24 +62,6 @@ function App() {
     }
   };
 
-  const handleNewsletterSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      await axios.post(`${API}/newsletter`, { email: newsletterEmail });
-      toast({
-        title: 'Subscribed!',
-        description: 'You\'ve been added to our newsletter.',
-      });
-      setNewsletterEmail('');
-    } catch (error) {
-      toast({
-        title: 'Error',
-        description: 'Could not subscribe. Please try again.',
-        variant: 'destructive',
-      });
-    }
-  };
-
   const scrollToContact = () => {
     document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
   };
@@ -109,7 +90,7 @@ function App() {
         </div>
       </nav>
 
-      {/* Hero Section - Apple Style */}
+      {/* Hero Section */}
       <section className="pt-32 pb-24 px-6" data-testid="hero-section">
         <div className="max-w-5xl mx-auto text-center">
           <h1 className="text-6xl md:text-8xl font-semibold mb-6 text-white tracking-tight" data-testid="hero-title">
@@ -119,7 +100,7 @@ function App() {
             End-to-end technology solutions that transform your business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button onClick={scrollToContact} className="apple-button-primary" data-testid="hero-cta-primary">
+            <button onClick={scrollToContact} className="apple-button-primary ripple" data-testid="hero-cta-primary">
               Get started
             </button>
             <button className="apple-button-secondary-dark" data-testid="hero-cta-secondary">
@@ -129,31 +110,31 @@ function App() {
         </div>
       </section>
 
-      {/* Stats Section - Minimal */}
+      {/* Stats Section */}
       <section className="py-20 bg-gray-800" data-testid="stats-section">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-12 text-center stagger-children">
             <div data-testid="stat-projects">
-              <div className="text-5xl font-semibold mb-2 text-white">150+</div>
+              <div className="text-5xl font-semibold mb-2 text-white stat-number">150+</div>
               <div className="text-sm text-gray-400">Projects Delivered</div>
             </div>
             <div data-testid="stat-clients">
-              <div className="text-5xl font-semibold mb-2 text-white">80+</div>
+              <div className="text-5xl font-semibold mb-2 text-white stat-number">80+</div>
               <div className="text-sm text-gray-400">Happy Clients</div>
             </div>
             <div data-testid="stat-years">
-              <div className="text-5xl font-semibold mb-2 text-white">8+</div>
+              <div className="text-5xl font-semibold mb-2 text-white stat-number">8+</div>
               <div className="text-sm text-gray-400">Years Experience</div>
             </div>
             <div data-testid="stat-rating">
-              <div className="text-5xl font-semibold mb-2 text-white">4.9</div>
+              <div className="text-5xl font-semibold mb-2 text-white stat-number">4.9</div>
               <div className="text-sm text-gray-400">Client Rating</div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Services Section - Apple Style */}
+      {/* Services Section */}
       <section id="services" className="py-24 px-6 bg-gray-900" data-testid="services-section">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-20">
@@ -162,7 +143,7 @@ function App() {
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="apple-card-dark" data-testid="service-salesforce">
-              <div className="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center mb-6">
+              <div className="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center mb-6 icon-rotate">
                 <Code className="h-6 w-6 text-white" />
               </div>
               <h3 className="text-2xl font-semibold mb-3 text-white">Salesforce Services</h3>
@@ -170,15 +151,15 @@ function App() {
                 Expert customization, technical solutions, and development work
               </p>
               <ul className="space-y-3 text-sm text-gray-400">
-                <li>Custom Salesforce Development</li>
-                <li>Integration & Migration</li>
-                <li>Workflow Automation</li>
-                <li>Technical Consulting</li>
+                <li className="hover:text-white transition-colors">Custom Salesforce Development</li>
+                <li className="hover:text-white transition-colors">Integration & Migration</li>
+                <li className="hover:text-white transition-colors">Workflow Automation</li>
+                <li className="hover:text-white transition-colors">Technical Consulting</li>
               </ul>
             </div>
 
             <div className="apple-card-dark" data-testid="service-mobile">
-              <div className="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center mb-6">
+              <div className="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center mb-6 icon-rotate">
                 <Smartphone className="h-6 w-6 text-white" />
               </div>
               <h3 className="text-2xl font-semibold mb-3 text-white">Mobile App Development</h3>
@@ -186,15 +167,15 @@ function App() {
                 Creating innovative mobile applications for iOS and Android
               </p>
               <ul className="space-y-3 text-sm text-gray-400">
-                <li>Native & Cross-Platform Apps</li>
-                <li>UI/UX Design</li>
-                <li>App Store Optimization</li>
-                <li>Maintenance & Support</li>
+                <li className="hover:text-white transition-colors">Native & Cross-Platform Apps</li>
+                <li className="hover:text-white transition-colors">UI/UX Design</li>
+                <li className="hover:text-white transition-colors">App Store Optimization</li>
+                <li className="hover:text-white transition-colors">Maintenance & Support</li>
               </ul>
             </div>
 
             <div className="apple-card-dark" data-testid="service-web">
-              <div className="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center mb-6">
+              <div className="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center mb-6 icon-rotate">
                 <Globe className="h-6 w-6 text-white" />
               </div>
               <h3 className="text-2xl font-semibold mb-3 text-white">Web Development</h3>
@@ -202,36 +183,36 @@ function App() {
                 Website creation, digital presence, and web solutions
               </p>
               <ul className="space-y-3 text-sm text-gray-400">
-                <li>Custom Web Applications</li>
-                <li>E-commerce Solutions</li>
-                <li>Progressive Web Apps</li>
-                <li>Performance Optimization</li>
+                <li className="hover:text-white transition-colors">Custom Web Applications</li>
+                <li className="hover:text-white transition-colors">E-commerce Solutions</li>
+                <li className="hover:text-white transition-colors">Progressive Web Apps</li>
+                <li className="hover:text-white transition-colors">Performance Optimization</li>
               </ul>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Why Choose Us - Minimal */}
+      {/* Why Choose Us */}
       <section className="py-24 bg-gray-800 px-6" data-testid="why-choose-section">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-20">
             <h2 className="text-5xl md:text-6xl font-semibold mb-4 text-white" data-testid="why-choose-title">Why Origem.</h2>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
-            <div className="text-center" data-testid="feature-customized">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 stagger-children">
+            <div className="text-center hover-lift" data-testid="feature-customized">
               <h3 className="text-xl font-semibold mb-3 text-white">Customized Solutions</h3>
               <p className="text-gray-400">Everything we deliver is tailored to your business</p>
             </div>
-            <div className="text-center" data-testid="feature-team">
+            <div className="text-center hover-lift" data-testid="feature-team">
               <h3 className="text-xl font-semibold mb-3 text-white">Expert Team</h3>
               <p className="text-gray-400">Certified professionals with years of experience</p>
             </div>
-            <div className="text-center" data-testid="feature-support">
+            <div className="text-center hover-lift" data-testid="feature-support">
               <h3 className="text-xl font-semibold mb-3 text-white">End-to-End Support</h3>
               <p className="text-gray-400">We're with you every step of the way</p>
             </div>
-            <div className="text-center" data-testid="feature-impact">
+            <div className="text-center hover-lift" data-testid="feature-impact">
               <h3 className="text-xl font-semibold mb-3 text-white">Business Impact</h3>
               <p className="text-gray-400">Measurable growth and efficiency</p>
             </div>
@@ -246,36 +227,36 @@ function App() {
             <h2 className="text-5xl md:text-6xl font-semibold mb-4 text-white" data-testid="portfolio-title">Our work.</h2>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="apple-card-dark" data-testid="portfolio-item-1">
-              <div className="h-64 bg-gradient-to-br from-blue-900/30 to-blue-800/30 rounded-2xl mb-6 flex items-center justify-center">
+            <div className="apple-card-dark portfolio-item" data-testid="portfolio-item-1">
+              <div className="h-64 bg-gradient-to-br from-blue-900/30 to-blue-800/30 rounded-2xl mb-6 flex items-center justify-center overflow-hidden">
                 <Code className="h-20 w-20 text-blue-400 opacity-30" />
               </div>
               <h3 className="text-xl font-semibold mb-2 text-white">E-Commerce Platform</h3>
               <p className="text-gray-400 mb-4">Custom Salesforce integration for online retail</p>
-              <a href="#" className="text-blue-500 text-sm inline-flex items-center hover:underline">
-                Learn more <ChevronRight className="h-4 w-4 ml-1" />
+              <a href="#" className="text-blue-500 text-sm inline-flex items-center hover:underline group">
+                Learn more <ChevronRight className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
 
-            <div className="apple-card-dark" data-testid="portfolio-item-2">
-              <div className="h-64 bg-gradient-to-br from-gray-800/50 to-gray-700/50 rounded-2xl mb-6 flex items-center justify-center">
+            <div className="apple-card-dark portfolio-item" data-testid="portfolio-item-2">
+              <div className="h-64 bg-gradient-to-br from-gray-800/50 to-gray-700/50 rounded-2xl mb-6 flex items-center justify-center overflow-hidden">
                 <Smartphone className="h-20 w-20 text-gray-500 opacity-30" />
               </div>
               <h3 className="text-xl font-semibold mb-2 text-white">Healthcare Mobile App</h3>
               <p className="text-gray-400 mb-4">Patient management system for iOS & Android</p>
-              <a href="#" className="text-blue-500 text-sm inline-flex items-center hover:underline">
-                Learn more <ChevronRight className="h-4 w-4 ml-1" />
+              <a href="#" className="text-blue-500 text-sm inline-flex items-center hover:underline group">
+                Learn more <ChevronRight className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
 
-            <div className="apple-card-dark" data-testid="portfolio-item-3">
-              <div className="h-64 bg-gradient-to-br from-blue-900/30 to-blue-800/30 rounded-2xl mb-6 flex items-center justify-center">
+            <div className="apple-card-dark portfolio-item" data-testid="portfolio-item-3">
+              <div className="h-64 bg-gradient-to-br from-blue-900/30 to-blue-800/30 rounded-2xl mb-6 flex items-center justify-center overflow-hidden">
                 <Globe className="h-20 w-20 text-blue-400 opacity-30" />
               </div>
               <h3 className="text-xl font-semibold mb-2 text-white">Corporate Website</h3>
               <p className="text-gray-400 mb-4">Modern web presence for Fortune 500 company</p>
-              <a href="#" className="text-blue-500 text-sm inline-flex items-center hover:underline">
-                Learn more <ChevronRight className="h-4 w-4 ml-1" />
+              <a href="#" className="text-blue-500 text-sm inline-flex items-center hover:underline group">
+                Learn more <ChevronRight className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
           </div>
@@ -289,14 +270,14 @@ function App() {
             <h2 className="text-5xl md:text-6xl font-semibold mb-4 text-white" data-testid="testimonials-title">What clients say.</h2>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial) => (
-              <div key={testimonial.id} className="bg-gray-700/50 rounded-3xl p-8 shadow-sm" data-testid={`testimonial-${testimonial.id}`}>
+            {testimonials.map((testimonial, index) => (
+              <div key={testimonial.id} className="bg-gray-700/50 rounded-3xl p-8 shadow-sm testimonial-card" style={{animationDelay: `${index * 0.1}s`}} data-testid={`testimonial-${testimonial.id}`}>
                 <p className="text-white mb-6 text-lg">"{testimonial.content}"</p>
                 <div className="flex items-center space-x-3">
                   <img
                     src={testimonial.image}
                     alt={testimonial.name}
-                    className="w-10 h-10 rounded-full"
+                    className="w-10 h-10 rounded-full animate-pulse"
                   />
                   <div>
                     <div className="font-semibold text-white text-sm">{testimonial.name}</div>
@@ -315,8 +296,8 @@ function App() {
           <h2 className="text-4xl md:text-5xl font-semibold mb-4 text-white" data-testid="tech-stack-title">Technologies.</h2>
           <p className="text-xl text-gray-400 mb-12">Cutting-edge tools and frameworks</p>
           <div className="flex flex-wrap justify-center gap-4">
-            {['Salesforce', 'React', 'React Native', 'Node.js', 'Python', 'MongoDB', 'AWS', 'TypeScript', 'GraphQL', 'Docker', 'Kubernetes', 'Next.js'].map((tech) => (
-              <span key={tech} className="px-6 py-2 bg-gray-800 rounded-full text-sm text-white" data-testid={`tech-${tech.toLowerCase().replace(/\./g, '-')}`}>
+            {['Salesforce', 'React', 'React Native', 'Node.js', 'Python', 'MongoDB', 'AWS', 'TypeScript', 'GraphQL', 'Docker', 'Kubernetes', 'Next.js'].map((tech, index) => (
+              <span key={tech} className="px-6 py-2 bg-gray-800 rounded-full text-sm text-white tech-badge" style={{animationDelay: `${index * 0.05}s`}} data-testid={`tech-${tech.toLowerCase().replace(/\./g, '-')}`}>
                 {tech}
               </span>
             ))}
@@ -332,35 +313,35 @@ function App() {
           </div>
           <Accordion type="single" collapsible className="w-full space-y-4">
             <AccordionItem value="item-1" className="border-b border-gray-700" data-testid="faq-item-1">
-              <AccordionTrigger className="text-left text-lg font-medium text-white hover:text-gray-300">What services does Origem provide?</AccordionTrigger>
+              <AccordionTrigger className="text-left text-lg font-medium text-white hover:text-gray-300 accordion-trigger">What services does Origem provide?</AccordionTrigger>
               <AccordionContent className="text-gray-400">
                 We specialize in three main areas: Salesforce services (customization, integration, and consulting), 
                 Mobile App Development (iOS and Android), and Web Development (custom websites and web applications).
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-2" className="border-b border-gray-700" data-testid="faq-item-2">
-              <AccordionTrigger className="text-left text-lg font-medium text-white hover:text-gray-300">How long does a typical project take?</AccordionTrigger>
+              <AccordionTrigger className="text-left text-lg font-medium text-white hover:text-gray-300 accordion-trigger">How long does a typical project take?</AccordionTrigger>
               <AccordionContent className="text-gray-400">
                 Project timelines vary depending on complexity and scope. A simple website might take 4-6 weeks, 
                 while a complex Salesforce implementation or mobile app could take 3-6 months.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-3" className="border-b border-gray-700" data-testid="faq-item-3">
-              <AccordionTrigger className="text-left text-lg font-medium text-white hover:text-gray-300">Do you provide post-launch support?</AccordionTrigger>
+              <AccordionTrigger className="text-left text-lg font-medium text-white hover:text-gray-300 accordion-trigger">Do you provide post-launch support?</AccordionTrigger>
               <AccordionContent className="text-gray-400">
                 Yes! We offer comprehensive post-launch support and maintenance packages. This includes bug fixes, 
                 updates, performance monitoring, and feature enhancements.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-4" className="border-b border-gray-700" data-testid="faq-item-4">
-              <AccordionTrigger className="text-left text-lg font-medium text-white hover:text-gray-300">What is your pricing model?</AccordionTrigger>
+              <AccordionTrigger className="text-left text-lg font-medium text-white hover:text-gray-300 accordion-trigger">What is your pricing model?</AccordionTrigger>
               <AccordionContent className="text-gray-400">
                 We offer flexible pricing models including fixed-price projects, time and materials, and retainer arrangements. 
                 The best approach depends on your project scope and requirements.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-5" className="border-b border-gray-700" data-testid="faq-item-5">
-              <AccordionTrigger className="text-left text-lg font-medium text-white hover:text-gray-300">Can you work with our existing systems?</AccordionTrigger>
+              <AccordionTrigger className="text-left text-lg font-medium text-white hover:text-gray-300 accordion-trigger">Can you work with our existing systems?</AccordionTrigger>
               <AccordionContent className="text-gray-400">
                 Absolutely! We specialize in integrating with existing systems, whether it's connecting to your current 
                 Salesforce setup, legacy databases, or third-party APIs.
@@ -373,11 +354,11 @@ function App() {
       {/* Contact Section */}
       <section id="contact" className="py-24 px-6 bg-gray-900" data-testid="contact-section">
         <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 animate-fade-in-up">
             <h2 className="text-5xl md:text-6xl font-semibold mb-4 text-white" data-testid="contact-title">Get in touch.</h2>
             <p className="text-xl text-gray-400">Tell us about your project</p>
           </div>
-          <div className="bg-gray-800/50 rounded-3xl p-8 md:p-12 shadow-sm border border-gray-700" data-testid="contact-form-card">
+          <div className="bg-gray-800/50 rounded-3xl p-8 md:p-12 shadow-sm border border-gray-700 animate-scale-in" data-testid="contact-form-card">
             <form onSubmit={handleContactSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
@@ -454,7 +435,7 @@ function App() {
               </div>
               <button
                 type="submit"
-                className="apple-button-primary w-full"
+                className="apple-button-primary w-full ripple"
                 disabled={isSubmitting}
                 data-testid="contact-submit-button"
               >
@@ -462,7 +443,7 @@ function App() {
               </button>
             </form>
           </div>
-          <div className="text-center mt-8">
+          <div className="text-center mt-8 animate-fade-in-up">
             <p className="text-gray-400 mb-2">Or call</p>
             <a href="tel:+918983609962" className="text-2xl font-semibold text-blue-500 hover:underline" data-testid="contact-phone-link">
               (+91) 89836 09962
