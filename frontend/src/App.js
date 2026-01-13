@@ -213,27 +213,27 @@ function App() {
       </section>
 
       {/* Why Choose Us - Minimal */}
-      <section className="py-24 bg-gray-50 px-6" data-testid="why-choose-section">
+      <section className="py-24 bg-gray-800 px-6" data-testid="why-choose-section">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-20">
-            <h2 className="text-5xl md:text-6xl font-semibold mb-4 text-gray-900" data-testid="why-choose-title">Why Origem.</h2>
+            <h2 className="text-5xl md:text-6xl font-semibold mb-4 text-white" data-testid="why-choose-title">Why Origem.</h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
             <div className="text-center" data-testid="feature-customized">
-              <h3 className="text-xl font-semibold mb-3 text-gray-900">Customized Solutions</h3>
-              <p className="text-gray-600">Everything we deliver is tailored to your business</p>
+              <h3 className="text-xl font-semibold mb-3 text-white">Customized Solutions</h3>
+              <p className="text-gray-400">Everything we deliver is tailored to your business</p>
             </div>
             <div className="text-center" data-testid="feature-team">
-              <h3 className="text-xl font-semibold mb-3 text-gray-900">Expert Team</h3>
-              <p className="text-gray-600">Certified professionals with years of experience</p>
+              <h3 className="text-xl font-semibold mb-3 text-white">Expert Team</h3>
+              <p className="text-gray-400">Certified professionals with years of experience</p>
             </div>
             <div className="text-center" data-testid="feature-support">
-              <h3 className="text-xl font-semibold mb-3 text-gray-900">End-to-End Support</h3>
-              <p className="text-gray-600">We're with you every step of the way</p>
+              <h3 className="text-xl font-semibold mb-3 text-white">End-to-End Support</h3>
+              <p className="text-gray-400">We're with you every step of the way</p>
             </div>
             <div className="text-center" data-testid="feature-impact">
-              <h3 className="text-xl font-semibold mb-3 text-gray-900">Business Impact</h3>
-              <p className="text-gray-600">Measurable growth and efficiency</p>
+              <h3 className="text-xl font-semibold mb-3 text-white">Business Impact</h3>
+              <p className="text-gray-400">Measurable growth and efficiency</p>
             </div>
           </div>
         </div>
