@@ -288,12 +288,12 @@ function App() {
       {/* Testimonials Section */}
       <section id="testimonials" className="py-24 bg-gray-800 px-6" data-testid="testimonials-section">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-20">
+          <div className="text-center mb-20 scroll-reveal">
             <h2 className="text-5xl md:text-6xl font-semibold mb-4 text-white" data-testid="testimonials-title">What clients say.</h2>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <div key={testimonial.id} className="bg-gray-700/50 rounded-3xl p-8 shadow-sm testimonial-card" style={{animationDelay: `${index * 0.1}s`}} data-testid={`testimonial-${testimonial.id}`}>
+              <div key={testimonial.id} className="bg-gray-700/50 rounded-3xl p-8 shadow-sm testimonial-card scroll-reveal scroll-reveal-bottom" style={{animationDelay: `${index * 0.1}s`}} data-testid={`testimonial-${testimonial.id}`}>
                 <p className="text-white mb-6 text-lg">"{testimonial.content}"</p>
                 <div className="flex items-center space-x-3">
                   <img
