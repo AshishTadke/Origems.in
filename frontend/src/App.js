@@ -133,22 +133,22 @@ function App() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-gray-800" data-testid="stats-section">
+      <section className="py-20 bg-gray-800 scroll-reveal" data-testid="stats-section">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-12 text-center stagger-children">
-            <div data-testid="stat-projects">
+            <div data-testid="stat-projects" className="scroll-reveal scroll-reveal-scale">
               <div className="text-5xl font-semibold mb-2 text-white stat-number">150+</div>
               <div className="text-sm text-gray-400">Projects Delivered</div>
             </div>
-            <div data-testid="stat-clients">
+            <div data-testid="stat-clients" className="scroll-reveal scroll-reveal-scale">
               <div className="text-5xl font-semibold mb-2 text-white stat-number">80+</div>
               <div className="text-sm text-gray-400">Happy Clients</div>
             </div>
-            <div data-testid="stat-years">
+            <div data-testid="stat-years" className="scroll-reveal scroll-reveal-scale">
               <div className="text-5xl font-semibold mb-2 text-white stat-number">8+</div>
               <div className="text-sm text-gray-400">Years Experience</div>
             </div>
-            <div data-testid="stat-rating">
+            <div data-testid="stat-rating" className="scroll-reveal scroll-reveal-scale">
               <div className="text-5xl font-semibold mb-2 text-white stat-number">4.9</div>
               <div className="text-sm text-gray-400">Client Rating</div>
             </div>
