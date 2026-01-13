@@ -180,7 +180,7 @@ function App() {
               </ul>
             </div>
 
-            <div className="apple-card-dark" data-testid="service-mobile">
+            <div className="apple-card-dark scroll-reveal" data-testid="service-mobile">
               <div className="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center mb-6 icon-rotate">
                 <Smartphone className="h-6 w-6 text-white" />
               </div>
@@ -196,7 +196,7 @@ function App() {
               </ul>
             </div>
 
-            <div className="apple-card-dark" data-testid="service-web">
+            <div className="apple-card-dark scroll-reveal scroll-reveal-right" data-testid="service-web">
               <div className="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center mb-6 icon-rotate">
                 <Globe className="h-6 w-6 text-white" />
               </div>
