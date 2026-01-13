@@ -328,12 +328,12 @@ function App() {
       </section>
 
       {/* FAQ Section */}
-      <section id="faq" className="py-24 bg-gray-800 px-6" data-testid="faq-section">
+      <section id="faq" className="py-24 bg-gray-800 px-6 scroll-reveal" data-testid="faq-section">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 scroll-reveal">
             <h2 className="text-5xl md:text-6xl font-semibold mb-4 text-white" data-testid="faq-title">Questions.</h2>
           </div>
-          <Accordion type="single" collapsible className="w-full space-y-4">
+          <Accordion type="single" collapsible className="w-full space-y-4 scroll-reveal scroll-reveal-bottom">
             <AccordionItem value="item-1" className="border-b border-gray-700" data-testid="faq-item-1">
               <AccordionTrigger className="text-left text-lg font-medium text-white hover:text-gray-300 accordion-trigger">What services does Origem provide?</AccordionTrigger>
               <AccordionContent className="text-gray-400">
