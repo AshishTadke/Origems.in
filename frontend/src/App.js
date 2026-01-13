@@ -325,43 +325,43 @@ function App() {
       </section>
 
       {/* FAQ Section */}
-      <section id="faq" className="py-24 bg-gray-50 px-6" data-testid="faq-section">
+      <section id="faq" className="py-24 bg-gray-800 px-6" data-testid="faq-section">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl font-semibold mb-4 text-gray-900" data-testid="faq-title">Questions.</h2>
+            <h2 className="text-5xl md:text-6xl font-semibold mb-4 text-white" data-testid="faq-title">Questions.</h2>
           </div>
           <Accordion type="single" collapsible className="w-full space-y-4">
-            <AccordionItem value="item-1" className="border-b border-gray-200" data-testid="faq-item-1">
-              <AccordionTrigger className="text-left text-lg font-medium hover:text-gray-600">What services does Origem provide?</AccordionTrigger>
-              <AccordionContent className="text-gray-600">
+            <AccordionItem value="item-1" className="border-b border-gray-700" data-testid="faq-item-1">
+              <AccordionTrigger className="text-left text-lg font-medium text-white hover:text-gray-300">What services does Origem provide?</AccordionTrigger>
+              <AccordionContent className="text-gray-400">
                 We specialize in three main areas: Salesforce services (customization, integration, and consulting), 
                 Mobile App Development (iOS and Android), and Web Development (custom websites and web applications).
               </AccordionContent>
             </AccordionItem>
-            <AccordionItem value="item-2" className="border-b border-gray-200" data-testid="faq-item-2">
-              <AccordionTrigger className="text-left text-lg font-medium hover:text-gray-600">How long does a typical project take?</AccordionTrigger>
-              <AccordionContent className="text-gray-600">
+            <AccordionItem value="item-2" className="border-b border-gray-700" data-testid="faq-item-2">
+              <AccordionTrigger className="text-left text-lg font-medium text-white hover:text-gray-300">How long does a typical project take?</AccordionTrigger>
+              <AccordionContent className="text-gray-400">
                 Project timelines vary depending on complexity and scope. A simple website might take 4-6 weeks, 
                 while a complex Salesforce implementation or mobile app could take 3-6 months.
               </AccordionContent>
             </AccordionItem>
-            <AccordionItem value="item-3" className="border-b border-gray-200" data-testid="faq-item-3">
-              <AccordionTrigger className="text-left text-lg font-medium hover:text-gray-600">Do you provide post-launch support?</AccordionTrigger>
-              <AccordionContent className="text-gray-600">
+            <AccordionItem value="item-3" className="border-b border-gray-700" data-testid="faq-item-3">
+              <AccordionTrigger className="text-left text-lg font-medium text-white hover:text-gray-300">Do you provide post-launch support?</AccordionTrigger>
+              <AccordionContent className="text-gray-400">
                 Yes! We offer comprehensive post-launch support and maintenance packages. This includes bug fixes, 
                 updates, performance monitoring, and feature enhancements.
               </AccordionContent>
             </AccordionItem>
-            <AccordionItem value="item-4" className="border-b border-gray-200" data-testid="faq-item-4">
-              <AccordionTrigger className="text-left text-lg font-medium hover:text-gray-600">What is your pricing model?</AccordionTrigger>
-              <AccordionContent className="text-gray-600">
+            <AccordionItem value="item-4" className="border-b border-gray-700" data-testid="faq-item-4">
+              <AccordionTrigger className="text-left text-lg font-medium text-white hover:text-gray-300">What is your pricing model?</AccordionTrigger>
+              <AccordionContent className="text-gray-400">
                 We offer flexible pricing models including fixed-price projects, time and materials, and retainer arrangements. 
                 The best approach depends on your project scope and requirements.
               </AccordionContent>
             </AccordionItem>
-            <AccordionItem value="item-5" className="border-b border-gray-200" data-testid="faq-item-5">
-              <AccordionTrigger className="text-left text-lg font-medium hover:text-gray-600">Can you work with our existing systems?</AccordionTrigger>
-              <AccordionContent className="text-gray-600">
+            <AccordionItem value="item-5" className="border-b border-gray-700" data-testid="faq-item-5">
+              <AccordionTrigger className="text-left text-lg font-medium text-white hover:text-gray-300">Can you work with our existing systems?</AccordionTrigger>
+              <AccordionContent className="text-gray-400">
                 Absolutely! We specialize in integrating with existing systems, whether it's connecting to your current 
                 Salesforce setup, legacy databases, or third-party APIs.
               </AccordionContent>
