@@ -130,24 +130,24 @@ function App() {
       </section>
 
       {/* Stats Section - Minimal */}
-      <section className="py-20 bg-gray-50" data-testid="stats-section">
+      <section className="py-20 bg-gray-800" data-testid="stats-section">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
             <div data-testid="stat-projects">
-              <div className="text-5xl font-semibold mb-2 text-gray-900">150+</div>
-              <div className="text-sm text-gray-600">Projects Delivered</div>
+              <div className="text-5xl font-semibold mb-2 text-white">150+</div>
+              <div className="text-sm text-gray-400">Projects Delivered</div>
             </div>
             <div data-testid="stat-clients">
-              <div className="text-5xl font-semibold mb-2 text-gray-900">80+</div>
-              <div className="text-sm text-gray-600">Happy Clients</div>
+              <div className="text-5xl font-semibold mb-2 text-white">80+</div>
+              <div className="text-sm text-gray-400">Happy Clients</div>
             </div>
             <div data-testid="stat-years">
-              <div className="text-5xl font-semibold mb-2 text-gray-900">8+</div>
-              <div className="text-sm text-gray-600">Years Experience</div>
+              <div className="text-5xl font-semibold mb-2 text-white">8+</div>
+              <div className="text-sm text-gray-400">Years Experience</div>
             </div>
             <div data-testid="stat-rating">
-              <div className="text-5xl font-semibold mb-2 text-gray-900">4.9</div>
-              <div className="text-sm text-gray-600">Client Rating</div>
+              <div className="text-5xl font-semibold mb-2 text-white">4.9</div>
+              <div className="text-sm text-gray-400">Client Rating</div>
             </div>
           </div>
         </div>
