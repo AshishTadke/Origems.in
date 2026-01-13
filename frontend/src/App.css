@@ -456,3 +456,140 @@ footer a:hover {
 .ripple:active::after {
   animation: ripple 0.6s ease-out;
 }
+
+/* Scroll Reveal Animations */
+.scroll-reveal {
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-reveal-active {
+  opacity: 1;
+}
+
+/* Scroll reveal from bottom */
+.scroll-reveal-bottom {
+  transform: translateY(50px);
+}
+
+.scroll-reveal-bottom.scroll-reveal-active {
+  transform: translateY(0);
+}
+
+/* Scroll reveal from left */
+.scroll-reveal-left {
+  transform: translateX(-50px);
+}
+
+.scroll-reveal-left.scroll-reveal-active {
+  transform: translateX(0);
+}
+
+/* Scroll reveal from right */
+.scroll-reveal-right {
+  transform: translateX(50px);
+}
+
+.scroll-reveal-right.scroll-reveal-active {
+  transform: translateX(0);
+}
+
+/* Scroll reveal scale */
+.scroll-reveal-scale {
+  transform: scale(0.9);
+}
+
+.scroll-reveal-scale.scroll-reveal-active {
+  transform: scale(1);
+}
+
+/* Scroll reveal fade */
+.scroll-reveal-fade {
+  opacity: 0;
+}
+
+.scroll-reveal-fade.scroll-reveal-active {
+  opacity: 1;
+}
+
+/* Parallax scroll effect for sections */
+@keyframes parallaxScroll {
+  from {
+    transform: translateY(30px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Scroll progress indicator */
+@keyframes scrollProgress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Smooth section transitions on scroll */
+section {
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Stagger scroll animations for grid items */
+.scroll-reveal-grid > * {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-reveal-grid.scroll-reveal-active > *:nth-child(1) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.1s;
+}
+
+.scroll-reveal-grid.scroll-reveal-active > *:nth-child(2) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.2s;
+}
+
+.scroll-reveal-grid.scroll-reveal-active > *:nth-child(3) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.3s;
+}
+
+.scroll-reveal-grid.scroll-reveal-active > *:nth-child(4) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.4s;
+}
+
+/* Smooth scroll snap */
+@supports (scroll-snap-type: y mandatory) {
+  html {
+    scroll-snap-type: y proximity;
+  }
+  
+  section {
+    scroll-snap-align: start;
+  }
+}
+
+/* Add smooth reveal for images */
+img {
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.scroll-reveal img {
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+.scroll-reveal-active img {
+  opacity: 1;
+  transform: scale(1);
+}
