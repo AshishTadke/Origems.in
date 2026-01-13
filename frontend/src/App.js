@@ -313,13 +313,13 @@ function App() {
       </section>
 
       {/* Technology Stack */}
-      <section className="py-24 px-6 bg-gray-900" data-testid="tech-stack-section">
+      <section className="py-24 px-6 bg-gray-900 scroll-reveal" data-testid="tech-stack-section">
         <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-semibold mb-4 text-white" data-testid="tech-stack-title">Technologies.</h2>
-          <p className="text-xl text-gray-400 mb-12">Cutting-edge tools and frameworks</p>
+          <h2 className="text-4xl md:text-5xl font-semibold mb-4 text-white scroll-reveal" data-testid="tech-stack-title">Technologies.</h2>
+          <p className="text-xl text-gray-400 mb-12 scroll-reveal">Cutting-edge tools and frameworks</p>
           <div className="flex flex-wrap justify-center gap-4">
             {['Salesforce', 'React', 'React Native', 'Node.js', 'Python', 'MongoDB', 'AWS', 'TypeScript', 'GraphQL', 'Docker', 'Kubernetes', 'Next.js'].map((tech, index) => (
-              <span key={tech} className="px-6 py-2 bg-gray-800 rounded-full text-sm text-white tech-badge" style={{animationDelay: `${index * 0.05}s`}} data-testid={`tech-${tech.toLowerCase().replace(/\./g, '-')}`}>
+              <span key={tech} className="px-6 py-2 bg-gray-800 rounded-full text-sm text-white tech-badge scroll-reveal scroll-reveal-scale" style={{animationDelay: `${index * 0.05}s`}} data-testid={`tech-${tech.toLowerCase().replace(/\./g, '-')}`}>
                 {tech}
               </span>
             ))}
