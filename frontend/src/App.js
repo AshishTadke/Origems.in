@@ -371,29 +371,29 @@ function App() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-24 px-6 bg-white" data-testid="contact-section">
+      <section id="contact" className="py-24 px-6 bg-gray-900" data-testid="contact-section">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl font-semibold mb-4 text-gray-900" data-testid="contact-title">Get in touch.</h2>
-            <p className="text-xl text-gray-600">Tell us about your project</p>
+            <h2 className="text-5xl md:text-6xl font-semibold mb-4 text-white" data-testid="contact-title">Get in touch.</h2>
+            <p className="text-xl text-gray-400">Tell us about your project</p>
           </div>
-          <div className="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100" data-testid="contact-form-card">
+          <div className="bg-gray-800/50 rounded-3xl p-8 md:p-12 shadow-sm border border-gray-700" data-testid="contact-form-card">
             <form onSubmit={handleContactSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <Label htmlFor="name" className="text-sm text-gray-900">Name</Label>
+                  <Label htmlFor="name" className="text-sm text-white">Name</Label>
                   <Input
                     id="name"
                     placeholder="John Doe"
                     value={contactForm.name}
                     onChange={(e) => setContactForm({ ...contactForm, name: e.target.value })}
                     required
-                    className="apple-input"
+                    className="apple-input-dark"
                     data-testid="contact-name-input"
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="email" className="text-sm text-gray-900">Email</Label>
+                  <Label htmlFor="email" className="text-sm text-white">Email</Label>
                   <Input
                     id="email"
                     type="email"
@@ -401,19 +401,19 @@ function App() {
                     value={contactForm.email}
                     onChange={(e) => setContactForm({ ...contactForm, email: e.target.value })}
                     required
-                    className="apple-input"
+                    className="apple-input-dark"
                     data-testid="contact-email-input"
                   />
                 </div>
               </div>
               <div className="grid md:grid-cols-4 gap-4">
                 <div className="space-y-2">
-                  <Label htmlFor="country_code" className="text-sm text-gray-900">Code</Label>
+                  <Label htmlFor="country_code" className="text-sm text-white">Code</Label>
                   <Select
                     value={contactForm.country_code}
                     onValueChange={(value) => setContactForm({ ...contactForm, country_code: value })}
                   >
-                    <SelectTrigger id="country_code" className="apple-input" data-testid="contact-country-code-select">
+                    <SelectTrigger id="country_code" className="apple-input-dark" data-testid="contact-country-code-select">
                       <SelectValue />
                     </SelectTrigger>
                     <SelectContent>
@@ -427,20 +427,20 @@ function App() {
                   </Select>
                 </div>
                 <div className="space-y-2 md:col-span-3">
-                  <Label htmlFor="phone" className="text-sm text-gray-900">Phone</Label>
+                  <Label htmlFor="phone" className="text-sm text-white">Phone</Label>
                   <Input
                     id="phone"
                     placeholder="1234567890"
                     value={contactForm.phone}
                     onChange={(e) => setContactForm({ ...contactForm, phone: e.target.value })}
                     required
-                    className="apple-input"
+                    className="apple-input-dark"
                     data-testid="contact-phone-input"
                   />
                 </div>
               </div>
               <div className="space-y-2">
-                <Label htmlFor="message" className="text-sm text-gray-900">Message</Label>
+                <Label htmlFor="message" className="text-sm text-white">Message</Label>
                 <Textarea
                   id="message"
                   placeholder="Tell us about your project..."
@@ -448,7 +448,7 @@ function App() {
                   value={contactForm.message}
                   onChange={(e) => setContactForm({ ...contactForm, message: e.target.value })}
                   required
-                  className="apple-input"
+                  className="apple-input-dark"
                   data-testid="contact-message-textarea"
                 />
               </div>
@@ -463,73 +463,51 @@ function App() {
             </form>
           </div>
           <div className="text-center mt-8">
-            <p className="text-gray-600 mb-2">Or call</p>
-            <a href="tel:+918983609962" className="text-2xl font-semibold text-blue-600 hover:underline" data-testid="contact-phone-link">
+            <p className="text-gray-400 mb-2">Or call</p>
+            <a href="tel:+918983609962" className="text-2xl font-semibold text-blue-500 hover:underline" data-testid="contact-phone-link">
               (+91) 89836 09962
             </a>
           </div>
         </div>
       </section>
 
-      {/* Newsletter Section */}
-      <section className="py-20 bg-gray-900 text-white" data-testid="newsletter-section">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-4xl font-semibold mb-4" data-testid="newsletter-title">Stay informed.</h2>
-          <p className="text-gray-400 mb-8">Get updates and insights delivered to your inbox.</p>
-          <form onSubmit={handleNewsletterSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-            <Input
-              type="email"
-              placeholder="Email address"
-              value={newsletterEmail}
-              onChange={(e) => setNewsletterEmail(e.target.value)}
-              required
-              className="apple-input bg-gray-800 border-gray-700 text-white placeholder:text-gray-500"
-              data-testid="newsletter-email-input"
-            />
-            <button type="submit" className="apple-button-secondary-white" data-testid="newsletter-submit-button">
-              Subscribe
-            </button>
-          </form>
-        </div>
-      </section>
-
       {/* Footer */}
-      <footer className="bg-gray-50 py-12 px-6 border-t border-gray-200" data-testid="footer">
+      <footer className="bg-gray-800 py-12 px-6 border-t border-gray-700" data-testid="footer">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
-              <h3 className="font-semibold mb-4 text-gray-900 text-sm">Services</h3>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li><a href="#services" className="hover:text-gray-900">Salesforce Services</a></li>
-                <li><a href="#services" className="hover:text-gray-900">Mobile Development</a></li>
-                <li><a href="#services" className="hover:text-gray-900">Web Development</a></li>
+              <h3 className="font-semibold mb-4 text-white text-sm">Services</h3>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li><a href="#services" className="hover:text-white">Salesforce Services</a></li>
+                <li><a href="#services" className="hover:text-white">Mobile Development</a></li>
+                <li><a href="#services" className="hover:text-white">Web Development</a></li>
               </ul>
             </div>
             <div>
-              <h3 className="font-semibold mb-4 text-gray-900 text-sm">Company</h3>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li><a href="#portfolio" className="hover:text-gray-900">Portfolio</a></li>
-                <li><a href="#testimonials" className="hover:text-gray-900">Testimonials</a></li>
-                <li><a href="#faq" className="hover:text-gray-900">FAQ</a></li>
+              <h3 className="font-semibold mb-4 text-white text-sm">Company</h3>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li><a href="#portfolio" className="hover:text-white">Portfolio</a></li>
+                <li><a href="#testimonials" className="hover:text-white">Testimonials</a></li>
+                <li><a href="#faq" className="hover:text-white">FAQ</a></li>
               </ul>
             </div>
             <div>
-              <h3 className="font-semibold mb-4 text-gray-900 text-sm">Connect</h3>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li><a href="#" className="hover:text-gray-900">LinkedIn</a></li>
-                <li><a href="#" className="hover:text-gray-900">Twitter</a></li>
-                <li><a href="#" className="hover:text-gray-900">Facebook</a></li>
+              <h3 className="font-semibold mb-4 text-white text-sm">Connect</h3>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li><a href="#" className="hover:text-white">LinkedIn</a></li>
+                <li><a href="#" className="hover:text-white">Twitter</a></li>
+                <li><a href="#" className="hover:text-white">Facebook</a></li>
               </ul>
             </div>
             <div>
-              <h3 className="font-semibold mb-4 text-gray-900 text-sm">Contact</h3>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li><a href="#contact" className="hover:text-gray-900">Get in Touch</a></li>
-                <li><a href="tel:+918983609962" className="hover:text-gray-900">(+91) 89836 09962</a></li>
+              <h3 className="font-semibold mb-4 text-white text-sm">Contact</h3>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li><a href="#contact" className="hover:text-white">Get in Touch</a></li>
+                <li><a href="tel:+918983609962" className="hover:text-white">(+91) 89836 09962</a></li>
               </ul>
             </div>
           </div>
-          <div className="border-t border-gray-200 pt-8 text-center text-sm text-gray-600">
+          <div className="border-t border-gray-700 pt-8 text-center text-sm text-gray-400">
             <p>© 2025 Origem Consulting. All rights reserved.</p>
           </div>
         </div>
