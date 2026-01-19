@@ -132,12 +132,12 @@ function App() {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-32 pb-24 px-6" data-testid="hero-section">
-        <div className="max-w-5xl mx-auto text-center">
-          <h1 className="text-6xl md:text-8xl font-semibold mb-6 text-white tracking-tight" data-testid="hero-title">
+      <section className="pt-36 pb-28 px-6 relative" data-testid="hero-section">
+        <div className="max-w-5xl mx-auto text-center relative z-10">
+          <h1 className="text-6xl md:text-8xl font-bold mb-6 leading-tight" data-testid="hero-title">
             Your Partner in<br />Salesforce, Web<br />& Mobile Solutions
           </h1>
-          <p className="text-xl md:text-2xl text-gray-400 mb-8 font-normal" data-testid="hero-description">
+          <p className="text-xl md:text-2xl text-gray-400 mb-10 font-light" data-testid="hero-description">
             End-to-end technology solutions that transform your business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
